@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- Navbar próximamente... -->
+      </nav>
+    </header>
+
+    <main class="main-container">
+      <h1 id="titulo1">Welcome to Chill Calculator . . .</h1>
+
+      
+      <div class="saludo-y-boton">
+        <button id="start">Iniciar calculadora</button> <!-- Boton para iniciar calculadora  -->
+
+        <div class='botonInfo-container'>
+          <button id="expandir" name="expand">Acerca de la calculadora</button>
+          <p id="mostrarInfo"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
+        </div>
+
+
+        <!-- Input para el nombre y saludo -->
+        <form class="presentacion-container" >
+          <div id="identificador"></div>
+          <input type="submit" class="GuardarNombre" id="Formulario"  value="¡Saluda!"></input>
+          <input type="text" class="IngresaNombre" id="ingresaNombre" placeholder="Ingresa tu nombre aquí" />
+        </form>
+        <!-- ************************************************************** -->
+
+      </div>
+
+      <!-- Calculadora  -->
+      <div id="calculador">
+        <input type="number" id="numero" placeholder="Ingresa un número:">
+        <h3 class="resultado"></h3>
+        <button type="submit" class="calcular">Calcular</button>
+      </div>
+    </main>
+      <!-- ************************************************************** -->
+
+
+    <!-- Historial de resultados  -->
+    <section class="historialLista">  
+      <h3>Resultados guardados hasta el momento: </h3>
+      <h3 class="impuestoActual"></h3>
+      <ul id="historial">
+      </ul>
+      <button class="LimpiarResultados">Limpiar resultados</button>
+    </section>
+    <!-- ************************************************************** -->
+    
+    <!-- Historial de cuotas  -->
+    <section class="seccion-cuotas">
+      <h3>Cuotas calculadas sobre el último resultado: </h3>
+      <button class="botonCuotas">Calcular Cuotas</button>
+      <h5 class="cuotah5">Ordenado desde 1 cuota (Primer valor)  hasta 12 cuotas (Ultimo valor, equivale a al monto por cuota) :</h5>
+      <h5 class="cuotasMontoActual"></h5>
+      <ul id="cuotas"></ul>
+      <button class="LimpiarCuotas">Limpiar Cuotas</button>
+
+      <!-- Botones de ocultar y mostrar -->
+      <div class="botones-container1">
+        <button class="mostrar">Mostrar</button>
+        <button class="ocultar">Ocultar</button>  
+      </div>
+      <!-- ************************************************************** -->
+
+    </section>
+    <!-- ************************************************************** -->
+
+
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

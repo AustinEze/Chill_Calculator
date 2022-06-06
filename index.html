@@ -6,74 +6,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/index.css" />
+    <!-- SWEETALERT2 -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script> -->  
   </head>
+
   <body>
     <header>
       <nav>
-        <!-- Navbar próximamente... -->
+        <!-- <a href="#">Inicio</a>
+        <a href="#">Conversor</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a> -->
       </nav>
     </header>
 
-    <main class="main-container">
-      <h1 id="titulo1">Welcome to Chill Calculator . . .</h1>
-
-      
-      <div class="saludo-y-boton">
-        <button id="start">Iniciar calculadora</button> <!-- Boton para iniciar calculadora  -->
-
-        <div class='botonInfo-container'>
-          <button id="expandir" name="expand">Acerca de la calculadora</button>
-          <p id="mostrarInfo"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
-        </div>
-
-
+    <h1 id="titulo1">Welcome to Chill Cave . . .</h1>
+    
+    <div class="derecha-container">
+      <div class="saludo-y-boton">        
         <!-- Input para el nombre y saludo -->
         <form class="presentacion-container" >
           <div id="identificador"></div>
-          <input type="submit" class="GuardarNombre" id="Formulario"  value="¡Saluda!"></input>
           <input type="text" class="IngresaNombre" id="ingresaNombre" placeholder="Ingresa tu nombre aquí" />
+          <input type="submit" class="GuardarNombre" id="Formulario"  value="¡Saluda!"></input>
         </form>
-        <!-- ************************************************************** -->
-
       </div>
+    </div>
+    <!-- ************************************************************** -->
 
+
+    <div class="container_informaciones">
+      <div class='botonInfo-listado-container'>
+        <button id="expandir-listado" name="expand">Recomendacion de acciones</button>
+        <p id="mostrarInfo-listado"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
+      </div>
+      
+      <div class='conversorInfo-container'>
+        <button id="conversor-expandir" name="expand">Acerca del conversor</button>
+        <p id="mostrarInfoConversor"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
+      </div>
+    
+      <div class='botonInfo-container'>
+        <button id="expandir" name="expand">Acerca de la calculadora</button>
+        <p id="mostrarInfo"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
+      </div>      
+    </div>
+
+
+    
+    <main class="main-container">
+      <!-- Conversor  -->
+          
       <!-- Calculadora  -->
-      <div id="calculador">
-        <input type="number" id="numero" placeholder="Ingresa un número:">
-        <h3 class="resultado"></h3>
-        <button type="submit" class="calcular">Calcular</button>
-      </div>
+      <div class="botones-start-container">
+        <!-- Boton para iniciar recomendaciones  -->
+        <button id="start-recomendaciones">Iniciar recomendaciones </button> 
+        
+        <!-- Boton para iniciar conversor  -->
+        <button id="start-conversor">Iniciar conversor</button> 
+                        
+        <!-- Boton para iniciar calculadora  -->
+        <div class="start-calculador-container">
+          <button id="start">Iniciar calculadora</button>
+          <div id="calculador">
+            <input type="number" id="numero" placeholder="Ingresa un número:">
+            <h3 class="resultado"></h3>
+            <button type="submit" class="calcular">Calcular</button>
+          </div>
+        </div>
+        <!-- *************************************************************** -->
+      </div>      
     </main>
       <!-- ************************************************************** -->
 
-
     <!-- Historial de resultados  -->
-    <section class="historialLista">  
-      <h3>Resultados guardados hasta el momento: </h3>
-      <h3 class="impuestoActual"></h3>
-      <ul id="historial">
-      </ul>
-      <button class="LimpiarResultados">Limpiar resultados</button>
-    </section>
+    <div class="historial-resultados-container">
+      <section class="historialLista">  
+        <h3 class="historialh3">Resultados guardados hasta el momento: </h3>
+        <h3 class="impuestoActual"></h3>
+        <ul id="historial">
+        </ul>
+        <button class="LimpiarResultados">Limpiar resultados</button>
+      </section>
+    </div>
     <!-- ************************************************************** -->
     
     <!-- Historial de cuotas  -->
-    <section class="seccion-cuotas">
-      <h3>Cuotas calculadas sobre el último resultado: </h3>
-      <button class="botonCuotas">Calcular Cuotas</button>
-      <h5 class="cuotah5">Ordenado desde 1 cuota (Primer valor)  hasta 12 cuotas (Ultimo valor, equivale a al monto por cuota) :</h5>
-      <h5 class="cuotasMontoActual"></h5>
-      <ul id="cuotas"></ul>
-      <button class="LimpiarCuotas">Limpiar Cuotas</button>
+    <div class='seccion-cuotas-container'>    
+      <section class="seccion-cuotas">
+        <h3>Cuotas calculadas sobre el último resultado: </h3>
+        <button class="botonCuotas">Calcular Cuotas</button>
+        <h5 class="cuotah5">Ordenado desde 1 cuota (Primer valor)  hasta 12 cuotas (Ultimo valor, equivale a al monto por cuota) :</h5>
+        <h5 class="cuotasMontoActual"></h5>
+        <ul id="cuotas"></ul>
+        <button class="LimpiarCuotas">Limpiar Cuotas</button>
 
       <!-- Botones de ocultar y mostrar -->
-      <div class="botones-container1">
-        <button class="mostrar">Mostrar</button>
-        <button class="ocultar">Ocultar</button>  
-      </div>
-      <!-- ************************************************************** -->
+        <div class="botones-container1">
+          <button class="mostrar">Mostrar</button>
+          <button class="ocultar">Ocultar</button>  
+        </div>
+        <!-- ************************************************************** -->
 
-    </section>
+      </section>
+    </div>
     <!-- ************************************************************** -->
 
 

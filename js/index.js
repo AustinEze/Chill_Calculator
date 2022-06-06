@@ -1,6 +1,18 @@
 //Algoritmo de cálculo para impuestos internacionales en pesos argentinos.
 // Contador de cuotas usando bucles hasta 12 cuotas.
 
+
+// Swal.fire({
+//   title: 'Bienvenid@',
+//   text: '¿Quieres continuar?',
+//   background: 'grey',
+//   icon: 'success',
+//   confirmButtonColor: '#000',
+//   confirmButtonText: 'Cool',
+// })
+
+
+
 // BOTON DE INFO 
 document.getElementById("expandir").addEventListener("click", function() 
 {
@@ -131,7 +143,17 @@ function saludar(e) {
     let contenido = document.createElement("h3");
     contenido.textContent = `Bienvenid@ ${ingresaNombre}, es un placer conocerte ;).`;
     titulo.appendChild(contenido);
+    Swal.fire({
+      title: 'Sweet!',
+      text: `Bienvenid@ ${ingresaNombre}, es un placer conocerte ;).`,
+      imageUrl: 'https://unsplash.it/400/200',
+      imageWidth: 300,
+      imageHeight: 150,
+      imageAlt: 'Custom image'
+    })
   }
+  
+
   ingresaNombre = localStorage.setItem("Nombre", ingresaNombre);
 }
 
@@ -172,3 +194,26 @@ const calcular = document.querySelector('.calcular')
 calcular.addEventListener('click', () =>{
   calculadora();
 })
+
+
+// INICIO CONVERSOR **************************************************************** 
+
+const cripto = {
+  moneda: 'Bitcoin',
+  tipo: 'criptomoneda',
+  valorActualUSD: 29.661 + 'USD'  
+}
+
+const {moneda, tipo, valorActualUSD} = cripto //Desestructuración
+
+const conversor = document.getElementById('start-conversor')
+
+function startConversor (e){
+  console.log(cripto);
+}
+
+conversor.addEventListener('click', (e) =>{
+  startConversor();
+})
+
+

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Oswald:wght@300&display=swap');
+@import 'globales';
+@import 'botones-start';
+@import 'botones-info';
+@import 'titulo-main';
+@import 'calculador';
+
+main {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    border-radius: 10px;
+    gap: 1em;
+}
+
+.presentacion-container {
+    display: flex;
+    flex-direction: column;
+    border-radius:10px;
+    width: 50%;
+}
+
+::placeholder { 
+    color: #000;
+    opacity: 1; 
+    font-weight: bold;
+  }
+
+input, select, textarea{
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.GuardarNombre:hover{
+    color: rgb(212, 212, 212);
+}
+
+#Formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.IngresaNombre{
+    width: 300px;
+    background:linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
+    border-radius: 20px;
+    text-align: center;
+    border: transparent;
+    opacity: 0.5;
+}
+
+
+.GuardarNombre{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 300px;
+    font-size: 1em;  
+    font-weight: bold;
+    border: transparent;
+    opacity: 0.5;
+    background-color: rgb(82, 82, 82);
+    border-radius:10px;
+}
+
+#identificador {
+    margin-bottom: 0.5rem;
+    width: 300px;
+    background:linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0.5;
+}
+
+
+

@@ -1,382 +1,480 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Oswald:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&family=Oswald:wght@300&display=swap");
 *,
 ::before,
-::after{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Oswald, sans-serif;
-}
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Oswald, sans-serif; }
 
 html {
-    background: rgb(74,84,98);
-    background-image: url('../png/dev3.gif');    
-    background-size: 100% auto;
-    /* background-repeat: no-repeat; */
-    background-position: center top;
-    height: 100%;
-    width:100%;
-}
+  background: #4a5462;
+  background-image: url("../png/dev3.gif");
+  background-size: contain 100%;
+  /*ARREGLO DE BACKGROUND*/
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100%;
+  width: 100%; }
 
+.botones-start-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 100vw;
+  justify-content: space-between; }
 
-main {
-    display: flex; 
+/* ANIMACION Y CSS DEL BOTON INICIAR CALCULADORA */
+#start, #start-conversor, #start-recomendaciones {
+  text-align: center;
+  font-weight: bold;
+  width: 300px;
+  position: relative;
+  padding: 10px 20px;
+  margin: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1em;
+  transition: 0.5s;
+  color: #21ebff;
+  background-color: #000;
+  overflow: hidden;
+  border-radius: 10px; }
+
+#start:hover, #start-conversor:hover, #start-recomendaciones:hover {
+  background: #21ebff;
+  color: #111;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s; }
+
+#start:before, #start-conversor:before, #start-recomendaciones:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: 0.5s;
+  transition-delay: 0.5s; }
+
+#start:hover:before, #start-conversor:hover:before, #start-recomendaciones:hover:before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s; }
+
+#start:after, #start-conversor:after, #start-recomendaciones:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff;
+  border-right: 2px solid #21ebff;
+  transition: 0.5s;
+  transition-delay: 0.5s; }
+
+#start:hover:after, #start-conversor:hover:after, #start-recomendaciones:hover:after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s; }
+
+/* FIN ANIMACION Y CSS DEL BOTON 'START' *****************************/
+/* INICIO BOTON START CONVERSOR ******************************* */
+#start-conversor {
+  color: #00ff11;
+  height: 48px; }
+
+#start-conversor:hover {
+  background: #00ff11;
+  color: #111;
+  box-shadow: 0 0 50px #00ff11;
+  transition-delay: 0.5s; }
+
+#start-conversor:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #00ff11;
+  border-left: 2px solid #00ff11;
+  transition: 0.5s;
+  transition-delay: 0.5s; }
+
+#start-conversor:hover:before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s; }
+
+#start-conversor:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #00ff11;
+  border-right: 2px solid #00ff11;
+  transition: 0.5s;
+  transition-delay: 0.5s; }
+
+#start-conversor:hover:after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s; }
+
+/* FIN BOTON START CONVERSOR ******************************************************************** */
+/* BOTON START RECOMENDACIONES ******************************************************************** */
+#start-recomendaciones {
+  color: #d000ff;
+  height: 48px; }
+
+#start-recomendaciones:hover {
+  background: #d000ff;
+  color: #111;
+  box-shadow: 0 0 50px #d000ff;
+  transition-delay: 0.5s; }
+
+#start-recomendaciones:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #d000ff;
+  border-left: 2px solid #d000ff;
+  transition: 0.5s;
+  transition-delay: 0.5s; }
+
+#start-recomendaciones:hover:before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s; }
+
+#start-recomendaciones:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #d000ff;
+  border-right: 2px solid #d000ff;
+  transition: 0.5s;
+  transition-delay: 0.5s; }
+
+#start-recomendaciones:hover:after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s; }
+
+/* FIN BOTON START RECOMENDACIONES ******************************************************************** */
+.configuracion {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #525252;
+  border: transparent;
+  opacity: 0.6;
+  border-radius: 10px; }
+
+.configuracion-expandir, .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo, .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir, .botonInfo-listado-container #expandir-listado .container_informaciones .botonInfo-container #mostrarInfo-listado, .botonInfo-listado-container #expandir-listado .container_informaciones .conversorInfo-container #mostrarInfo-listado, .container_informaciones .botonInfo-listado-container #expandir-listado #mostrarInfo-listado, .conversorInfo-container #conversor-expandir, .botonInfo-listado-container #expandir-listado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #525252;
+  border: transparent;
+  opacity: 0.6;
+  border-radius: 10px; }
+
+/* BOTONES DE INFO */
+.container_informaciones, .container_informaciones .botonInfo-container, .container_informaciones .conversorInfo-container, .container_informaciones .botonInfo-listado-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem; }
+  .container_informaciones .botonInfo-container, .container_informaciones .botonInfo-container .botonInfo-container, .container_informaciones .conversorInfo-container .botonInfo-container, .container_informaciones .botonInfo-listado-container .botonInfo-container, .container_informaciones .conversorInfo-container, .container_informaciones .botonInfo-container .conversorInfo-container, .container_informaciones .conversorInfo-container .conversorInfo-container, .container_informaciones .botonInfo-listado-container .conversorInfo-container, .container_informaciones .botonInfo-listado-container, .container_informaciones .botonInfo-container .botonInfo-listado-container, .container_informaciones .conversorInfo-container .botonInfo-listado-container, .container_informaciones .botonInfo-listado-container .botonInfo-listado-container {
+    width: 330px;
     flex-direction: column;
-    padding-left: 10px;
-    border-radius: 10px;
-    gap: 3em;
-}
+    margin-right: 1rem; }
+    .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo {
+      gap: 0; }
+    .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir, .botonInfo-listado-container #expandir-listado .container_informaciones .botonInfo-container #mostrarInfo-listado, .botonInfo-listado-container #expandir-listado .container_informaciones .conversorInfo-container #mostrarInfo-listado, .container_informaciones .botonInfo-listado-container #expandir-listado #mostrarInfo-listado {
+      gap: 0; }
+      .container_informaciones .botonInfo-container #expandir:hover, .container_informaciones .conversorInfo-container #expandir:hover, .container_informaciones .botonInfo-listado-container #expandir:hover, .botonInfo-listado-container #expandir-listado .container_informaciones .botonInfo-container #mostrarInfo-listado:hover, .botonInfo-listado-container #expandir-listado .container_informaciones .conversorInfo-container #mostrarInfo-listado:hover, .container_informaciones .botonInfo-listado-container #expandir-listado #mostrarInfo-listado:hover {
+        color: #d4d4d4; }
 
+.conversorInfo-container #conversor-expandir:hover {
+  color: #d4d4d4; }
 
-.presentacion-container {
-    border-radius:10px;
-}
+.conversorInfo-container #conversor-expandir #mostrarInfoConversor {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #525252;
+  border: transparent;
+  opacity: 0.6;
+  border-radius: 10px; }
 
-/* BOTON DE INFO */
-#expandir {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 8em;  
-    font-weight: bold;
-    background-color: rgb(82, 82, 82);
-    border-radius:10px;  
-  }
-  
-  #mostrarInfo {
-    width: 300px;
-    margin-top: 1rem;
-    margin-left: 10px;
-    background: rgb(85,85,85);
-    border-radius:10px;
-    background: linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
-    border-radius: 10px;
-    opacity: 0.5;
-    width: 300px;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .botonInfo-container {
-    display: flex;
-    flex-direction: column;
-    align-items:center;
-  }
-  
-  #expandir:hover{
-    color: rgb(212, 212, 212);
-  }
-/* **************************************************************************   */
+.botonInfo-listado-container #expandir-listado:hover {
+  color: #d4d4d4; }
 
-
-
+.botonInfo-listado-container #expandir-listado #mostrarInfo-listado {
+  width: 300px; }
 
 /* TITULO Y ANIMACION */
-
 #titulo1 {
-    margin-top:2rem;
-    margin-bottom: 3rem;
-    position: relative;
-    letter-spacing: 3px;
-    font-size: 2.7em;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-    color: rgb(54, 54, 54);
-    width:100%;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.521));
-    line-height: 0.7em;
-    outline: none;
-    animation: animate 5s linear infinite; 
-}
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  letter-spacing: 3px;
+  font-size: 2.7em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #363636;
+  width: 100%;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, rgba(0, 0, 0, 0.521));
+  line-height: 0.7em;
+  outline: none;
+  animation: animate 5s linear infinite; }
 
 @keyframes animate {
-    0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% 
-    {
-        color: rgb(54, 54, 54);
-        box-shadow: none;
-    }
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+    color: #363636;
+    box-shadow: none; }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+    color: #fff;
+    text-shadow: 0 0 10px #6b6b6b, 0 0 20px #6b6b6b, 0 0 40px #6b6b6b, 0 0 80px #6b6b6b, 0 0 160px #6b6b6b; } }
 
-    18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100%
-    {
-        color: #fff;
-        text-shadow: 0 0 10px rgb(107, 107, 107),
-        0 0 20px rgb(107, 107, 107),
-        0 0 40px rgb(107, 107, 107),
-        0 0 80px rgb(107, 107, 107),
-        0 0 160px rgb(107, 107, 107);
-    }
-}
 /* ******************************************************************************** */
-
-
-
-::placeholder { 
-    color: #000;
-    opacity: 1; 
-    font-weight: bold;
-  }
-
-input, select, textarea{
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.GuardarNombre:hover{
-    color: rgb(212, 212, 212);
-}
-
-#Formulario{
-    display: flex;
-    flex-direction: column;
-}
-
-.IngresaNombre{
-    width: 300px;
-    background:linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
-    border-radius: 20px;
-    text-align: center;
-    opacity: 0.5;
-}
-
-
-.GuardarNombre{
-    display: flex;
-    align-items: center;
-    margin-top: 0.5rem;
-    width: 300px;
-    font-size: 1em;  
-    font-weight: bold;
-    background-color: rgb(82, 82, 82);
-    border-radius:10px;
-}
-
-
-#identificador {
-    margin-bottom: 0.5rem;
-    width: 300px;
-    background:linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
-    border-radius: 20px;
-    text-align: center;
-    opacity: 0.5;
-}
-
 .historialLista {
-    margin-top: 1rem;
-    margin-left: 10px;
-    background: rgb(85,85,85);
-    border-radius:10px;
-    background: linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
-    border-radius: 10px;
-    opacity: 0.5;
-    width: 300px;
-    text-align: center;
-}
+  width: 300px;
+  margin-top: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+  border-radius: 10px;
+  opacity: 0.5; }
+
+.historial-resultados-container, .seccion-cuotas-container {
+  margin-right: 1.2rem; }
+
+.historial-resultados-container, .seccion-cuotas-container, .seccion-cuotas-container {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center; }
+
+#historial {
+  display: flex;
+  flex-direction: column; }
 
 #historial li {
-    margin-top: 0.5rem;
-    font-weight: bold;
-}
+  margin-top: 0.5rem;
+  font-weight: bold; }
 
-.botones-container1{
-    display:flex;
-    flex-direction: row;
-    gap: 5em;
-    margin-top: 1rem;
-    padding-bottom: 1rem;
-}
+.botones-container1 {
+  display: flex;
+  flex-direction: row;
+  gap: 5em;
+  margin-top: 1rem;
+  padding-bottom: 1rem; }
 
 .mostrar {
-    margin-left: 3em;
-}
+  margin-left: 3em; }
 
-.mostrar, .ocultar{
-  width: 4rem;  
+.mostrar, .ocultar {
+  width: 4rem;
   font-weight: bold;
-  background-color: rgb(82, 82, 82);
-  border-radius:10px;
-}
+  border: transparent;
+  background-color: #525252;
+  border-radius: 10px; }
 
-.mostrar:hover{
-    color: rgb(212, 212, 212);
-}
+.mostrar:hover {
+  color: #d4d4d4; }
 
-.ocultar:hover{
-    color: rgb(212, 212, 212);
-}
-
-/* ANIMACION Y CSS DEL BOTON 'START' */
-#start {
-    font-weight: bold;
-    width: 300px;
-    position: relative;
-    padding: 10px 30px;
-    margin: 0 5px; 
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 1em;
-    transition: 0.5s;
-    color: #21ebff;
-    background-color: #000;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-#start:hover{
-    background:#21ebff;
-    color: #111;
-    box-shadow: 0 0 50px #21ebff;
-    transition-delay: 0.5s; 
-}
-
-#start:before{
-    content: '';
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid #21ebff;
-    border-left: 2px solid #21ebff;
-    transition: 0.5s;
-    transition-delay: 0.5s;
-}
-
-#start:hover:before{
-    width: 100%;
-    height: 100%;
-    transition-delay: 0s;
-}
-
-#start:after{
-    content: '';
-    position:absolute;
-    bottom: 0;
-    right: 0;
-    width: 10px;
-    height: 10px;
-    border-bottom: 2px solid #21ebff;
-    border-right: 2px solid #21ebff;
-    transition: 0.5s;
-    transition-delay: 0.5s;
-}
-
-#start:hover:after{
-    width: 100%;
-    height: 100%;
-    transition-delay: 0s;
-}
-/* FIN ANIMACION Y CSS DEL BOTON 'START' *****************************/
-
+.ocultar:hover {
+  color: #d4d4d4; }
 
 .saludo-y-boton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 10px;
-}
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
+  width: 50%; }
 
-#calculador{
-    display:flex;
-    flex-direction: column;
-    margin-top: 1rem;
-    background: rgb(85,85,85);
-    background: linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
-    border-radius: 10px;
-    opacity: 0.5;
-    width: 300px;
-    text-align: center;
-    border-radius:10px;
-}
+.start-calculador-container {
+  margin-right: 10px; }
+
+#calculador, #numero {
+  margin-left: 1.2rem;
+  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+  border-radius: 10px;
+  opacity: 0.7;
+  text-align: center;
+  width: 300px; }
 
 #numero {
-    width: 300px;
-    background-color: transparent;
-    border-radius: transparent 20px;
-    text-align: center;
-    border-radius:10px;
-}
+  opacity: 1;
+  margin-left: 0;
+  border: transparent;
+  background-color: transparent; }
 
 .calcular {
-    margin-top: 0.5rem;
-    width: 300px;
-    font-size: 1em;  
-    font-weight: bold;
-    background-color: rgb(82, 82, 82);
-    border-radius:10px;
-}
+  margin-top: 0.5rem;
+  width: 300px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  border: transparent;
+  background-color: transparent; }
+
+.calcular:hover {
+  color: #d4d4d4; }
 
 .resultado {
-    font-size: 1em;  
-    font-weight: bold;
-    width: 300px;
-    margin-top: 0.5rem;
-    border-radius:30px;
-}
+  font-size: 1em;
+  font-weight: bold;
+  width: 300px;
+  margin-top: 0.5rem;
+  border-radius: 30px; }
 
 .botonCuotas {
-    margin-top:1rem;
-    margin-bottom:1rem;
-    width: 7em;
-    font-size: 1em;  
-    font-weight: bold;
-    border-radius:10px;
-}
-
-
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 7em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #525252;
+  opacity: 1; }
 
 .seccion-cuotas {
-    list-style-type: decimal-leading-zero;
-    margin-top: 1rem;
-    margin-left: 10px;
-    margin-bottom: 1rem;
-    background: rgb(85,85,85);
-    background: linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
-    border-radius: 10px;
-    opacity: 0.5;
-    width: 300px;
-    text-align: center;
-}
+  list-style-type: decimal-leading-zero;
+  margin-top: 1rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 1rem;
+  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+  border-radius: 10px;
+  opacity: 0.5;
+  width: 300px;
+  text-align: center; }
 
-.cuotasMontoActual{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    font-weight: bold;
-}
+.cuotasMontoActual {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+#cuotas {
+  list-style-type: none; }
 
 #cuotas li {
-    font-weight: bold;
-}
+  font-weight: bold; }
 
-.cuotah5{
-    margin-top: 1rem; 
-    margin-bottom: 1rem; 
-}
+.cuotah5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .botonCuotas:hover {
-    color: rgb(212, 212, 212);
-}
+  color: #d4d4d4; }
 
 .LimpiarCuotas {
-    margin-top:1rem;
-    margin-bottom:1rem;
-    width: 7em;
-    font-size: 1em;  
-    font-weight: bold;
-    border-radius:10px;
-}
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 7em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #525252; }
+
+.LimpiarCuotas:hover {
+  color: #d4d4d4; }
 
 .LimpiarResultados {
-    margin-top: 0.5rem;
-    width: 300px;
-    font-size: 1em;  
-    font-weight: bold;
-    background-color: transparent;
-    border-radius: transparent 10px;
-    border-radius:10px;
-}
+  margin-top: 0.5rem;
+  width: 300px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #525252; }
 
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 10px;
+  border-radius: 10px;
+  gap: 1em; }
 
+.presentacion-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 50%; }
 
+::placeholder {
+  color: #000;
+  opacity: 1;
+  font-weight: bold; }
+
+input, select, textarea {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase; }
+
+.GuardarNombre:hover {
+  color: #d4d4d4; }
+
+#Formulario {
+  display: flex;
+  flex-direction: column; }
+
+.IngresaNombre {
+  width: 300px;
+  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+  border-radius: 20px;
+  text-align: center;
+  border: transparent;
+  opacity: 0.5; }
+
+.GuardarNombre {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  width: 300px;
+  font-size: 1em;
+  font-weight: bold;
+  border: transparent;
+  opacity: 0.5;
+  background-color: #525252;
+  border-radius: 10px; }
+
+#identificador {
+  margin-bottom: 0.5rem;
+  width: 300px;
+  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+  border-radius: 20px;
+  text-align: center;
+  opacity: 0.5; }

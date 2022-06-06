@@ -1,0 +1,18 @@
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Oswald, sans-serif;
+}
+
+html {
+    background: rgb(74,84,98);
+    background-image: url('../png/dev3.gif');    
+     background-size: contain 100%;   /*ARREGLO DE BACKGROUND*/
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 100%;
+    width:100%;
+}

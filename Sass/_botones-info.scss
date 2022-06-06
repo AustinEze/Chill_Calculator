@@ -1,0 +1,101 @@
+.configuracion {
+  width: 200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(82, 82, 82);
+  border: transparent;
+  opacity: 0.6;
+  border-radius:10px;
+}
+
+.configuracion-expandir{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: rgb(82, 82, 82);
+  border: transparent;
+  opacity: 0.6;
+  border-radius:10px;  
+}
+/* BOTONES DE INFO */
+.container_informaciones {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+
+
+       .botonInfo-container {
+        @extend .container_informaciones;
+        width: 330px;
+        flex-direction: column;
+        margin-right: 1rem;
+        
+          #mostrarInfo {
+              @extend .configuracion-expandir;
+              gap: 0;
+            }
+          
+            #expandir {
+              @extend .configuracion-expandir;
+              gap: 0;
+                &:hover{
+                  color: rgb(212, 212, 212);
+                }             
+            }      
+        } 
+}
+// ***************************************************************
+
+// INFO CONVERSOR
+.conversorInfo-container {
+  @extend .botonInfo-container;
+    #conversor-expandir {
+      @extend .configuracion-expandir;
+        &:hover{
+          color: rgb(212, 212, 212);
+        }             
+          #mostrarInfoConversor {
+            width: 300px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: rgb(82, 82, 82);
+            border: transparent;
+            opacity: 0.6;
+            border-radius:10px;
+          }
+    }      
+  }
+
+// **************************************************************
+
+
+//INFO LISTADO 
+.botonInfo-listado-container {
+  @extend .botonInfo-container;
+    #expandir-listado {
+      @extend .configuracion-expandir;  
+        &:hover{
+          color: rgb(212, 212, 212);
+        }             
+        
+        #mostrarInfo-listado {
+          width: 300px;
+          @extend #expandir;
+        }
+    }      
+}
+// ******************************************************** 

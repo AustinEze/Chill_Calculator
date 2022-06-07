@@ -1,18 +1,6 @@
 //Algoritmo de cálculo para impuestos internacionales en pesos argentinos.
 // Contador de cuotas usando bucles hasta 12 cuotas.
 
-
-// Swal.fire({
-//   title: 'Bienvenid@',
-//   text: '¿Quieres continuar?',
-//   background: 'grey',
-//   icon: 'success',
-//   confirmButtonColor: '#000',
-//   confirmButtonText: 'Cool',
-// })
-
-
-
 // BOTON DE INFO CALCULADORA
 document.getElementById("expandir").addEventListener("click", function() 
 {
@@ -251,28 +239,3 @@ calcular.addEventListener('click', () =>{
 
 // INICIO CONVERSOR **************************************************************** 
 
-// function conversor (){
-//   let resultado
-// }
-
-const cripto = {
-  moneda: 'Bitcoin',
-  tipo: 'criptomoneda',
-  valorActualUSD: 29.661 + 'USD'  
-}
-
-const {moneda, tipo, valorActualUSD} = cripto //Desestructuración
-
-const conversor = document.getElementById('start-conversor')
-
-function startConversor (e){
-  console.log(cripto);
-}
-
-conversor.addEventListener('click', (e) =>{
-  startConversor();
-})
-
-
-// Inicio listado de empresas *********************
-// Fin listado de empresas *********************

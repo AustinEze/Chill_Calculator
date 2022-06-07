@@ -13,7 +13,7 @@
 
 
 
-// BOTON DE INFO 
+// BOTON DE INFO CALCULADORA
 document.getElementById("expandir").addEventListener("click", function() 
 {
 		var mostrarp = document.getElementById('mostrarInfo');
@@ -22,6 +22,28 @@ document.getElementById("expandir").addEventListener("click", function()
     mostrarp.style.display = displayValue;
 });
 //*************************************************************************** */
+
+// BOTON DE INFO CONVERSOR
+document.getElementById("conversor-expandir").addEventListener("click", function() 
+{
+		var mostrarp = document.getElementById('mostrarInfoConversor');
+    var displayValue = (mostrarp.style.display === "block") ? "none" : "block";
+    this.innerHTML = (displayValue === "block") ? "Ocultar" : "Acerca del conversor";
+    mostrarp.style.display = displayValue;
+});
+//*************************************************************************** */
+
+// BOTON DE INFO DEL LISTADO
+document.getElementById("expandir-listado").addEventListener("click", function() 
+{
+		var mostrarp = document.getElementById('mostrarInfo-listado');
+    var displayValue = (mostrarp.style.display === "block") ? "none" : "block";
+    this.innerHTML = (displayValue === "block") ? "Ocultar" : "Recomendación de acciones";
+    mostrarp.style.display = displayValue;
+});
+//*************************************************************************** */
+
+
 
 const historialresultados = [];
 
@@ -143,14 +165,22 @@ function saludar(e) {
     let contenido = document.createElement("h3");
     contenido.textContent = `Bienvenid@ ${ingresaNombre}, es un placer conocerte ;).`;
     titulo.appendChild(contenido);
-    Swal.fire({
-      title: 'Sweet!',
-      text: `Bienvenid@ ${ingresaNombre}, es un placer conocerte ;).`,
-      imageUrl: 'https://unsplash.it/400/200',
-      imageWidth: 300,
-      imageHeight: 150,
-      imageAlt: 'Custom image'
-    })
+
+    Toastify({ 
+      text: "🤖 Bienvenido y gracias por usar Chill cave . . . 🤖",
+      duration: 7000,
+      newWindow: true,
+      close: true,
+      gravity: "top", 
+      position: "left", 
+      stopOnFocus: true,
+      style: {
+        background: "linear-gradient(to right, #828282, #404040)",
+      },
+      onClick: function(){
+      } 
+    }).showToast();
+
   }
   
 
@@ -179,9 +209,18 @@ ocultar.addEventListener("click", () => {
 //Event Start --------------------------------------------/
 const start = document.getElementById("start");
 const calculador = document.getElementById("calculador");
+const historialRes = document.querySelector(".historial-resultados-container");
+const SeccionCuo = document.querySelector(".seccion-cuotas-container");
+const BotonesC1 = document.querySelector(".botones-container1");
 calculador.style.visibility = 'hidden'
+historialRes.style.visibility = 'hidden'
+SeccionCuo.style.visibility = 'hidden'
+BotonesC1.style.visibility = 'hidden'
 start.addEventListener('click', () => {
   calculador.style.visibility = 'visible'
+  historialRes.style.visibility = 'visible'
+  SeccionCuo.style.visibility = 'visible'
+  BotonesC1.style.visibility = 'visible'
 })
 
 //-------------------------------------------------------/
@@ -193,10 +232,28 @@ const calcular = document.querySelector('.calcular')
 
 calcular.addEventListener('click', () =>{
   calculadora();
+  Toastify({ 
+    text: "🤖 Resultado calculado con éxito 🤖",
+    duration: 4500,
+    newWindow: true,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    style: {
+      background: "linear-gradient(to right, #828282, #404040)",
+    },
+    onClick: function(){
+    } // Callback after click
+  }).showToast();
 })
 
 
 // INICIO CONVERSOR **************************************************************** 
+
+// function conversor (){
+//   let resultado
+// }
 
 const cripto = {
   moneda: 'Bitcoin',
@@ -217,3 +274,5 @@ conversor.addEventListener('click', (e) =>{
 })
 
 
+// Inicio listado de empresas *********************
+// Fin listado de empresas *********************

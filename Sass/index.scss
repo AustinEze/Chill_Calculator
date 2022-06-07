@@ -4,9 +4,20 @@
 @import 'botones-info';
 @import 'titulo-main';
 @import 'calculador';
+@import 'variables';
+@import 'navbar';
+@import 'conversor';
+
+.configuracion-flex{
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
 
 main {
-    display: flex; 
+    @extend .configuracion-flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 10px;
@@ -14,37 +25,40 @@ main {
     gap: 1em;
 }
 
+.derecha-container {
+    @extend .configuracion-flex;
+}
+
+.saludo-y-boton {
+    @extend .configuracion-flex;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+
 .presentacion-container {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     border-radius:10px;
-    width: 50%;
+
 }
 
-::placeholder { 
-    color: #000;
-    opacity: 1; 
-    font-weight: bold;
-  }
-
-input, select, textarea{
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
 .GuardarNombre:hover{
-    color: rgb(212, 212, 212);
+    color: $background-color;
 }
 
+
+
 #Formulario{
-    display: flex;
-    flex-direction: column;
+    @extend .configuracion-flex;
+
 }
 
 .IngresaNombre{
     width: 300px;
-    background:linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
+    background:$background-gradient;
     border-radius: 20px;
     text-align: center;
     border: transparent;
@@ -68,11 +82,9 @@ input, select, textarea{
 #identificador {
     margin-bottom: 0.5rem;
     width: 300px;
-    background:linear-gradient(347deg, rgba(85,85,85,1) 0%, rgba(130,130,130,1) 55%, rgba(200,200,200,1) 100%);
+    background:$background-gradient;
     border-radius: 20px;
     text-align: center;
     opacity: 0.5;
 }
-
-
 

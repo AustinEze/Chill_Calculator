@@ -16,3 +16,15 @@ html {
     height: 100%;
     width:100%;
 }
+
+::placeholder { 
+    color: #000;
+    opacity: 1; 
+    font-weight: bold;
+  }
+
+input, select, textarea{
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}

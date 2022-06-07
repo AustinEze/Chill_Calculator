@@ -1,0 +1,40 @@
+ nav {
+    width: 79vw;
+    min-width: 600px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+    margin: auto;   
+    padding-bottom: 0.7rem;
+    padding-top: 0.4rem;
+    background: #151515;
+    opacity: 0.7;
+    border-radius: 0 0 20px 20px;
+        .nav-item{
+            position: relative;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-family: Oswald, sans-serif;
+            color: #b6b6b6;
+            padding: 0 10px;
+                &:after{
+                    content: '';
+                    position: absolute;
+                    background-color: rgb(202, 33, 188);
+                    height: 3px;
+                    width: 0;
+                    left: 0;
+                    bottom: -10px;
+                    transition: 0.3s;
+                }
+                &:hover{
+                    color: #fff;
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+    
+        }
+    
+}
+

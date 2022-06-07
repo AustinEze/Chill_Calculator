@@ -17,6 +17,16 @@ html {
   height: 100%;
   width: 100%; }
 
+::placeholder {
+  color: #000;
+  opacity: 1;
+  font-weight: bold; }
+
+input, select, textarea {
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase; }
+
 .botones-start-container {
   display: flex;
   flex-direction: row;
@@ -182,12 +192,12 @@ html {
   margin-top: 0rem;
   font-size: 1em;
   font-weight: bold;
-  background-color: #525252;
+  background-color: #828282;
   border: transparent;
   opacity: 0.6;
   border-radius: 10px; }
 
-.configuracion-expandir, .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo, .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir, .botonInfo-listado-container #expandir-listado .container_informaciones .botonInfo-container #mostrarInfo-listado, .botonInfo-listado-container #expandir-listado .container_informaciones .conversorInfo-container #mostrarInfo-listado, .container_informaciones .botonInfo-listado-container #expandir-listado #mostrarInfo-listado, .conversorInfo-container #conversor-expandir, .botonInfo-listado-container #expandir-listado {
+.configuracion-expandir, .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo, .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir, .conversorInfo-container #mostrarInfoConversor, .conversorInfo-container #conversor-expandir, .botonInfo-listado-container #mostrarInfo-listado, .botonInfo-listado-container #expandir-listado {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -195,7 +205,7 @@ html {
   margin-top: 1rem;
   font-size: 1em;
   font-weight: bold;
-  background-color: #525252;
+  background-color: #828282;
   border: transparent;
   opacity: 0.6;
   border-radius: 10px; }
@@ -213,32 +223,22 @@ html {
     margin-right: 1rem; }
     .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo {
       gap: 0; }
-    .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir, .botonInfo-listado-container #expandir-listado .container_informaciones .botonInfo-container #mostrarInfo-listado, .botonInfo-listado-container #expandir-listado .container_informaciones .conversorInfo-container #mostrarInfo-listado, .container_informaciones .botonInfo-listado-container #expandir-listado #mostrarInfo-listado {
+    .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir {
       gap: 0; }
-      .container_informaciones .botonInfo-container #expandir:hover, .container_informaciones .conversorInfo-container #expandir:hover, .container_informaciones .botonInfo-listado-container #expandir:hover, .botonInfo-listado-container #expandir-listado .container_informaciones .botonInfo-container #mostrarInfo-listado:hover, .botonInfo-listado-container #expandir-listado .container_informaciones .conversorInfo-container #mostrarInfo-listado:hover, .container_informaciones .botonInfo-listado-container #expandir-listado #mostrarInfo-listado:hover {
-        color: #d4d4d4; }
+      .container_informaciones .botonInfo-container #expandir:hover, .container_informaciones .conversorInfo-container #expandir:hover, .container_informaciones .botonInfo-listado-container #expandir:hover {
+        color: #828282; }
+
+.conversorInfo-container #mostrarInfoConversor {
+  gap: 0; }
 
 .conversorInfo-container #conversor-expandir:hover {
-  color: #d4d4d4; }
+  color: #828282; }
 
-.conversorInfo-container #conversor-expandir #mostrarInfoConversor {
-  width: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-  font-size: 1em;
-  font-weight: bold;
-  background-color: #525252;
-  border: transparent;
-  opacity: 0.6;
-  border-radius: 10px; }
+.botonInfo-listado-container #mostrarInfo-listado {
+  gap: 0; }
 
 .botonInfo-listado-container #expandir-listado:hover {
-  color: #d4d4d4; }
-
-.botonInfo-listado-container #expandir-listado #mostrarInfo-listado {
-  width: 300px; }
+  color: #828282; }
 
 /* TITULO Y ANIMACION */
 #titulo1 {
@@ -309,16 +309,10 @@ html {
   border-radius: 10px; }
 
 .mostrar:hover {
-  color: #d4d4d4; }
+  color: #828282; }
 
 .ocultar:hover {
-  color: #d4d4d4; }
-
-.saludo-y-boton {
-  display: flex;
-  flex-direction: row;
-  margin-right: 10px;
-  width: 50%; }
+  color: #828282; }
 
 .start-calculador-container {
   margin-right: 10px; }
@@ -347,7 +341,7 @@ html {
   background-color: transparent; }
 
 .calcular:hover {
-  color: #d4d4d4; }
+  color: #828282; }
 
 .resultado {
   font-size: 1em;
@@ -396,7 +390,7 @@ html {
   margin-bottom: 1rem; }
 
 .botonCuotas:hover {
-  color: #d4d4d4; }
+  color: #828282; }
 
 .LimpiarCuotas {
   margin-top: 1rem;
@@ -409,7 +403,7 @@ html {
   background-color: #525252; }
 
 .LimpiarCuotas:hover {
-  color: #d4d4d4; }
+  color: #828282; }
 
 .LimpiarResultados {
   margin-top: 0.5rem;
@@ -420,36 +414,96 @@ html {
   border: transparent;
   background-color: #525252; }
 
-main {
+.Toastify {
+  border-radius: 10px; }
+
+nav {
+  width: 79vw;
+  min-width: 600px;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 0.7rem;
+  padding-top: 0.4rem;
+  background: #151515;
+  opacity: 0.7;
+  border-radius: 0 0 20px 20px; }
+  nav .nav-item {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: Oswald, sans-serif;
+    color: #b6b6b6;
+    padding: 0 10px; }
+    nav .nav-item:after {
+      content: '';
+      position: absolute;
+      background-color: #ca21bc;
+      height: 3px;
+      width: 0;
+      left: 0;
+      bottom: -10px;
+      transition: 0.3s; }
+    nav .nav-item:hover {
+      color: #fff; }
+    nav .nav-item:hover:after {
+      width: 100%; }
+
+.d-flex, .start-conversor-container, .start-conversor-container .conversor {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.configuracion-input, .start-conversor-container .conversor .Inputbtc, .start-conversor-container .conversor .Inputusd, .Convertir-usd, .Convertir-btc {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #828282;
+  border: transparent;
+  opacity: 0.6;
+  border-radius: 10px; }
+
+.start-conversor-container {
+  flex-direction: column; }
+  .start-conversor-container .conversor {
+    gap: 0.3em; }
+
+.Convertir-usd, .Convertir-btc {
+  margin-top: 0.3rem; }
+  .Convertir-usd:hover, .Convertir-btc:hover {
+    color: #ececec; }
+
+.configuracion-flex, main, .derecha-container, .saludo-y-boton, #Formulario {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px; }
+
+main {
   flex-direction: row;
   justify-content: space-between;
   padding-left: 10px;
   border-radius: 10px;
   gap: 1em; }
 
+.saludo-y-boton {
+  margin-bottom: 2rem;
+  margin-top: 2rem; }
+
 .presentacion-container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  border-radius: 10px;
-  width: 50%; }
-
-::placeholder {
-  color: #000;
-  opacity: 1;
-  font-weight: bold; }
-
-input, select, textarea {
-  color: #000;
-  font-weight: bold;
-  text-transform: uppercase; }
+  border-radius: 10px; }
 
 .GuardarNombre:hover {
-  color: #d4d4d4; }
-
-#Formulario {
-  display: flex;
-  flex-direction: column; }
+  color: #828282; }
 
 .IngresaNombre {
   width: 300px;

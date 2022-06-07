@@ -1,0 +1,49 @@
+.d-flex{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.configuracion-input {
+    width: 150px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0rem;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: $background-color;
+    border: transparent;
+    opacity: 0.6;
+    border-radius:10px;
+}
+
+.start-conversor-container {
+    @extend .d-flex;
+    flex-direction: column;
+        .conversor {
+            @extend .d-flex;
+            gap: 0.3em;
+            .Inputbtc {
+                @extend .configuracion-input;
+            }
+            .Inputusd {
+                @extend .configuracion-input;
+            }
+        }        
+}
+
+.Convertir-usd{
+    @extend .configuracion-input;
+    margin-top: 0.3rem;
+        &:hover{
+            color: $hover-color;
+        }    
+}
+
+.Convertir-btc{
+    @extend .Convertir-usd;
+}
+
+

@@ -1,3 +1,4 @@
+// EXTENDS
 .d-flex{
     display:flex;
     justify-content: center;
@@ -17,6 +18,30 @@
     border: transparent;
     opacity: 0.6;
     border-radius:10px;
+}
+// ******************************************************
+
+.datos-conversor{
+    @extend .configuracion-input;
+    width: 300px;
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+}
+
+.datosporunidad-container{
+    @extend .d-flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;    
+}
+
+.Unidadbtc-container{
+    @extend .d-flex;
+    gap: 0.5em;
+    flex-direction: row;
+}
+
+.Unidadusd-container{
+    @extend .Unidadbtc-container;
 }
 
 .start-conversor-container {

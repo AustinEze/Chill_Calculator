@@ -450,12 +450,12 @@ nav {
     nav .nav-item:hover:after {
       width: 100%; }
 
-.d-flex, .start-conversor-container, .start-conversor-container .conversor {
+.d-flex, .datosporunidad-container, .Unidadbtc-container, .Unidadusd-container, .start-conversor-container, .start-conversor-container .conversor {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.configuracion-input, .start-conversor-container .conversor .Inputbtc, .start-conversor-container .conversor .Inputusd, .Convertir-usd, .Convertir-btc {
+.configuracion-input, .datos-conversor, .start-conversor-container .conversor .Inputbtc, .start-conversor-container .conversor .Inputusd, .Convertir-usd, .Convertir-btc {
   width: 150px;
   display: flex;
   justify-content: center;
@@ -468,6 +468,19 @@ nav {
   border: transparent;
   opacity: 0.6;
   border-radius: 10px; }
+
+.datos-conversor {
+  width: 300px;
+  margin-bottom: 0.5rem;
+  flex-direction: column; }
+
+.datosporunidad-container {
+  flex-direction: column;
+  margin-bottom: 0.5rem; }
+
+.Unidadbtc-container, .Unidadusd-container {
+  gap: 0.5em;
+  flex-direction: row; }
 
 .start-conversor-container {
   flex-direction: column; }

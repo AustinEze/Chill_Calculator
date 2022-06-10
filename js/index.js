@@ -31,8 +31,6 @@ document.getElementById("expandir-listado").addEventListener("click", function()
 });
 //*************************************************************************** */
 
-
-
 const historialresultados = [];
 
 const botonlimpiarResultados = document.querySelector('.LimpiarResultados')
@@ -194,7 +192,7 @@ ocultar.addEventListener("click", () => {
 //********************************************************/
 
 
-//Event Start --------------------------------------------/
+//Calculadora Start --------------------------------------------/
 const start = document.getElementById("start");
 const calculador = document.getElementById("calculador");
 const historialRes = document.querySelector(".historial-resultados-container");
@@ -225,9 +223,9 @@ calcular.addEventListener('click', () =>{
     duration: 4500,
     newWindow: true,
     close: true,
-    gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
-    stopOnFocus: true, // Prevents dismissing of toast on hover
+    gravity: "top", 
+    position: "right", 
+    stopOnFocus: true,
     style: {
       background: "linear-gradient(to right, #828282, #404040)",
     },
@@ -238,4 +236,33 @@ calcular.addEventListener('click', () =>{
 
 
 // INICIO CONVERSOR **************************************************************** 
+let usd = document.querySelector('.Inputusd').value;
+let btc = document.querySelector('.Inputbtc').value;
+// let convertirusd = document.querySelector('.')
+// function conversorusd (){
+// }
 
+const valorusdBoton = document.querySelector('.Convertir-usd');
+const valorusdContainer = document.querySelector('.Convertir-usd-container');
+
+function mostrarusd(e) {
+  const valorusd = parseInt(document.querySelector('.Inputusd').value);
+  console.log(valorusd)
+}
+
+valorusdBoton.addEventListener('click', () => {
+  mostrarusd();
+});
+
+fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
+  .then(response => response.json()) //transformo el response a .json
+  .then(datos => displayDatos(datos)) // guardo datos en una variable y abajo la muestro con console.log 
+
+const displayDatos = datos => {
+  const valoractualusd = document.querySelector('.Equivalenciausd')
+  const usd = datos.bpi.USD.rate_float;
+  valoractualusd.innerHTML = usd + ' USD';
+  console.log (datos);
+  console.log (datos.bpi.USD.symbol);
+
+}

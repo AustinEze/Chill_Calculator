@@ -62,15 +62,38 @@
         <!-- Boton para iniciar conversor  -->
         <div class="start-conversor-container" >
           <button id="start-conversor">Iniciar conversor</button>
+          <div class="datos-conversor">
+            <h2>Valor actual de BTC:</h2>
+            
+            <div class="datosporunidad-container">
+              <!-- Equivalencia de un bitcoin a usd -->
+              <div class="Unidadbtc-container" >
+                <h3 class="Unidadbtc">1 BTC</h3>
+                <h3 class="=">=</h3>
+                <h3 class="Equivalenciausd"></h3>
+              </div>
+              <!-- Equivalencia de un usd a bitcoin -->
+              <div class="Unidadusd-container" >
+                <h3 class="Unidadusd">1 USD</h3>
+                <h3 class="=">=</h3>
+                <h3 class="Equivalenciabtc"></h3>
+              </div>
+
+            </div>
+          
+          </div>
           <div class="conversor">
             <div class="Convertir-btc-container">
               <input class="Inputbtc"  type="number" placeholder="Cantidad BTC">
               <button class="Convertir-btc">Convertir a USD</button>
+              <ul class="ListaUSD"></ul>
             </div>
 
             <div class="Convertir-usd-container">
               <input class="Inputusd"  type="number" placeholder="Cantidad USD">
               <button class="Convertir-usd">Convertir a BTC</button>
+              <ul class="ListaBTC"></ul>
+              
             </div>
             <ul class="Conversor-resultados"></ul>
           </div>

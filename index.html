@@ -35,35 +35,35 @@
 
 
     <div class="container_informaciones">
-      <div class='botonInfo-listado-container'>
-        <button id="expandir-listado" name="expand">Recomendacion de acciones</button>
-        <p id="mostrarInfo-listado"  style="display:none;">Este listado se hizo con el fin de informar de forma simple y rápida sobre las mejores opciones de empresas para invertir en criptomonedas según las acciones e informaciones actuales del mercado. <br> NOTA: Todo lo visto o aplicado en este proyecto es con simple fines de práctica y aprendizaje.</p>      
       </div>
       
-      <div class='conversorInfo-container'>
-        <button id="conversor-expandir" name="expand">Acerca del conversor</button>
-        <p id="mostrarInfoConversor"  style="display:none;">Este conversor tiene la funcion de convertir dólares a bitcoin y viceversa. Inspirado completamente en el mundo de las criptomonedas y con la finalidad de poder ayudar a más de un inversor o trader <br> NOTA: Todo lo visto o aplicado en este proyecto es con simple fines de práctica y aprendizaje. </p>      
-      </div>
     
-      <div class='botonInfo-container'>
-        <button id="expandir" name="expand">Acerca de la calculadora</button>
-        <p id="mostrarInfo"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
-      </div>      
     </div>
     
     <main class="main-container">
-      <!-- Conversor  -->
-          
+      
       <!-- Calculadora  -->
-      <div class="botones-start-container">
-        <!-- Boton para iniciar recomendaciones  -->
-        <button id="start-recomendaciones">Iniciar recomendaciones </button> 
+      <div class="botones-start-container"> 
+
+        <div class="startRecomendaciones-container">
+          <div class='botonInfo-listado-container'>
+            <button id="expandir-listado" name="expand">Acerca de las recomendaciones</button>
+            <p id="mostrarInfo-listado"  style="display:none;">Este listado se hizo con el fin de informar de forma simple y rápida sobre las mejores opciones de empresas para invertir en criptomonedas según las acciones e informaciones actuales del mercado. <br> NOTA: Todo lo visto o aplicado en este proyecto es con simple fines de práctica y aprendizaje.</p>      
+          </div>
+          <button id="start-recomendaciones">Iniciar recomendaciones </button><!-- Boton para iniciar recomendaciones  --> 
+        </div>
         
-        <!-- Boton para iniciar conversor  -->
-        <div class="start-conversor-container" >
-          <button id="start-conversor">Iniciar conversor</button>
+        <!-- INICIO DE CONVERSOR  -->
+        <div class="start-conversor-container" >   <!-- CONVERSOR CONTAINER  -->
+
+          <div class='conversorInfo-container'>
+            <button id="conversor-expandir" name="expand">Acerca del conversor</button>
+            <p id="mostrarInfoConversor"  style="display:none;">Este conversor tiene la funcion de convertir dólares a bitcoin y viceversa. Inspirado completamente en el mundo de las criptomonedas y con la finalidad de poder ayudar a más de un inversor o trader <br> NOTA: Todo lo visto o aplicado en este proyecto es con simple fines de práctica y aprendizaje. </p>      
+          </div>
+    
+          <button id="start-conversor">Iniciar conversor</button><!-- Boton para iniciar conversor  -->
           <div class="datos-conversor">
-            <h2>Valor actual de BTC:</h2>
+            <h2>Valores actuales BTC/USD:</h2>
             
             <div class="datosporunidad-container">
               <!-- Equivalencia de un bitcoin a usd -->
@@ -72,80 +72,97 @@
                 <h3 class="=">=</h3>
                 <h3 class="Equivalenciausd"></h3>
               </div>
+              <!-- *********************************** -->
+
               <!-- Equivalencia de un usd a bitcoin -->
               <div class="Unidadusd-container" >
                 <h3 class="Unidadusd">1 USD</h3>
                 <h3 class="=">=</h3>
                 <h3 class="Equivalenciabtc"></h3>
               </div>
-
+              <!-- *********************************** -->
             </div>
           
           </div>
           <div class="conversor">
             <div class="Convertir-btc-container">
               <input class="Inputbtc"  type="number" placeholder="Cantidad BTC">
-              <button class="Convertir-btc">Convertir a USD</button>
-              <ul class="ListaUSD"></ul>
+              <h3 class="ResultadoUSD"></h3>
             </div>
 
             <div class="Convertir-usd-container">
               <input class="Inputusd"  type="number" placeholder="Cantidad USD">
-              <button class="Convertir-usd">Convertir a BTC</button>
-              <ul class="ListaBTC"></ul>
-              
+              <h3 class="ResultadoBTC"></h3>              
             </div>
-            <ul class="Conversor-resultados"></ul>
           </div>
           
-        </div>
-         
-                        
-        <!-- Boton para iniciar calculadora  -->
-        <div class="start-calculador-container">
-          <button id="start">Iniciar calculadora</button>
+          <div class="Botones-conversor-container">
+            <button class="BotonConversorBTC">CONVERSOR BTC</button>
+            <button class="BotonConversorUSD">CONVERSOR USD</button>
+          </div>
+          
+          <div class="ConversorLista-container">
+            <h3>ACLARACION: El resultado en última posición corresponde al último resultado calculado.</h3>
+            <h3 class="conversorListah3">Resultados guardados del conversor: </h3>
+            <ul class="ConversorLista"></ul>
+            <button class="Limpiar-historial-conversor">Limpiar historial</button>
+          </div>
+        </div> 
+        <!-- FIN DE CONVERSOR CONTAINER  -->
+
+        
+        <!-- INICIO DE CALCULADORA -->
+        <div class="start-calculador-container"><!-- CALCULADORA CONTAINER  --> 
+          <div class='botonInfo-container'>
+            <button id="expandir" name="expand">Acerca de la calculadora</button>
+            <p id="mostrarInfo"  style="display:none;">Esta calculadora fue creada para calcular impuestos por compra internacional, inspirada en compras de plataformas digitales de videojuegos como Steam, Epic Games, Ubisoft. <br> NOTA: El precio calculado aquí no siempre será exacto, dandonos como resultado un precio aproximado al real.</p>      
+          </div>      
+    
+          <button id="start">Iniciar calculadora</button><!-- Boton para iniciar calculadora  -->
           <div id="calculador">
             <input type="number" id="numero" placeholder="Ingresa un número:">
             <h3 class="resultado"></h3>
             <button type="submit" class="calcular">Calcular</button>
           </div>
+        
+            <!-- Historial de resultados  -->
+          <div class="historial-resultados-container">
+            <section class="historialLista">  
+              <h3 class="historialh3">Resultados guardados hasta el momento: </h3>
+              <h3 class="impuestoActual"></h3>
+              <ul id="historial">
+              </ul>
+              <button class="LimpiarResultados">Limpiar resultados</button>
+            </section>
+          </div>
+          <!-- ************************************************************** -->
+    
+          <!-- Historial de cuotas  -->
+          <div class='seccion-cuotas-container'>    
+            <section class="seccion-cuotas">
+              <h3>Cuotas calculadas sobre el último resultado: </h3>
+              <button class="botonCuotas">Calcular Cuotas</button>
+              <h5 class="cuotah5">Ordenado desde 1 cuota (Primer valor)  hasta 12 cuotas (Ultimo valor, equivale a al monto por cuota) :</h5>
+              <h5 class="cuotasMontoActual"></h5>
+              <ul id="cuotas"></ul>
+              <button class="LimpiarCuotas">Limpiar Cuotas</button>
+
+              <!-- Botones de ocultar y mostrar -->
+              <div class="botones-container1">
+                <button class="mostrar">Mostrar</button>
+                <button class="ocultar">Ocultar</button>  
+              </div>
+              <!-- ************************************************************** -->
+            </section>
+          </div>
+          
         </div>
         <!-- *************************************************************** -->
       </div>      
     </main>
       <!-- ************************************************************** -->
 
-    <!-- Historial de resultados  -->
-    <div class="historial-resultados-container">
-      <section class="historialLista">  
-        <h3 class="historialh3">Resultados guardados hasta el momento: </h3>
-        <h3 class="impuestoActual"></h3>
-        <ul id="historial">
-        </ul>
-        <button class="LimpiarResultados">Limpiar resultados</button>
-      </section>
-    </div>
-    <!-- ************************************************************** -->
     
-    <!-- Historial de cuotas  -->
-    <div class='seccion-cuotas-container'>    
-      <section class="seccion-cuotas">
-        <h3>Cuotas calculadas sobre el último resultado: </h3>
-        <button class="botonCuotas">Calcular Cuotas</button>
-        <h5 class="cuotah5">Ordenado desde 1 cuota (Primer valor)  hasta 12 cuotas (Ultimo valor, equivale a al monto por cuota) :</h5>
-        <h5 class="cuotasMontoActual"></h5>
-        <ul id="cuotas"></ul>
-        <button class="LimpiarCuotas">Limpiar Cuotas</button>
-
-      <!-- Botones de ocultar y mostrar -->
-        <div class="botones-container1">
-          <button class="mostrar">Mostrar</button>
-          <button class="ocultar">Ocultar</button>  
-        </div>
-        <!-- ************************************************************** -->
-
-      </section>
-    </div>
     <!-- ************************************************************** -->
 
     <script src="js/index.js"></script>

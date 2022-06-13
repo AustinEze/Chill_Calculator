@@ -1,7 +1,6 @@
 // EXTENDS
 .d-flex{
     display:flex;
-    justify-content: center;
     align-items:center;
 }
 
@@ -16,8 +15,24 @@
     font-weight: bold;
     background-color: $background-color;
     border: transparent;
-    opacity: 0.6;
+    opacity: 0.9;
     border-radius:10px;
+}
+
+
+.configuracion-botones {
+    width: 250px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: $background-color;
+    border: transparent;
+    opacity: 0.9;
+    border-radius:10px;
+    text-align: center;
 }
 // ******************************************************
 
@@ -59,16 +74,53 @@
         }        
 }
 
-.Convertir-usd{
+.Botones-conversor-container{
+    @extend .d-flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+
+.BotonConversorBTC, .BotonConversorUSD {
     @extend .configuracion-input;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
+    width: 148px;
         &:hover{
             color: $hover-color;
         }    
 }
 
-.Convertir-btc{
-    @extend .Convertir-usd;
+.ResultadoBTC, .ResultadoUSD {
+    @extend .configuracion-input;
+    margin-top: 0.5rem;    
 }
 
+.ConversorLista-container {
+    @extend .configuracion-input;
+    list-style-type: decimal;
+    flex-direction: column;
+    width: 300px;    
+    margin-top: 0.5rem;
+        .conversorListah3{
+            margin-top: 1rem;
+            text-transform: uppercase;
+        }
+        
+        .Limpiar-historial-conversor{
+            @extend .configuracion-botones;    
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: $border-botones;
+                &:hover{
+                    color: $hover-color;
+                }
+        }
 
+        .Botones-conversor-historial-container {
+            @extend .d-flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            gap: 2em;
+        }        
+}

@@ -1,7 +1,7 @@
 @import 'variables';
 
 .configuracion {
-  width: 200px;
+  width: 300px;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -10,8 +10,9 @@
   font-weight: bold;
   background-color: $background-color;
   border: transparent;
-  opacity: 0.6;
+  opacity: 0.7;
   border-radius:10px;
+  text-align: center;
 }
 
 .configuracion-expandir{
@@ -27,74 +28,19 @@
   opacity: 0.6;
   border-radius:10px;  
 }
-/* BOTONES DE INFO */
-.container_informaciones {
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 
-
-       .botonInfo-container {
-        @extend .container_informaciones;
-        width: 330px;
-        flex-direction: column;
-        margin-right: 1rem;
-        
-          #mostrarInfo {
-              @extend .configuracion-expandir;
-              gap: 0;
-            }
-          
-            #expandir {
-              @extend .configuracion-expandir;
-              gap: 0;
-                &:hover{
-                  color: $background-color;
-                }             
-            }      
-        } 
+.botonInfo-listado-container, .botonInfo-container, .conversorInfo-container {
+ @extend .configuracion; 
+  flex-direction: column;
 }
-// ***************************************************************
-
-// INFO CONVERSOR
-.conversorInfo-container {
-  @extend .botonInfo-container;
-  
-  #mostrarInfoConversor {
-    @extend .configuracion-expandir;
-    gap: 0;
-  }  
-    
-  #conversor-expandir {
-      @extend .configuracion-expandir;
-        &:hover{
-          color: $background-color;
-        }             
-          
-    }      
-  }
-
-// **************************************************************
 
 
-//INFO LISTADO 
-.botonInfo-listado-container {
-  @extend .botonInfo-container;
-
-    #mostrarInfo-listado {
-      @extend .configuracion-expandir;
-      gap: 0;
+#expandir-listado, #conversor-expandir, #expandir {
+  background-color: transparent !important;
+  border: transparent;
+  font-weight: bold;
+  text-transform: uppercase;
+    &:hover{
+      color: $hover-color;
     }
-
-    #expandir-listado {
-      @extend .configuracion-expandir;  
-        &:hover{
-          color: $background-color;
-        }             
-        
-
-    }      
 }
-// ******************************************************** 

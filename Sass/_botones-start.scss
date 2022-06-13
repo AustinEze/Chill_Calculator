@@ -1,19 +1,19 @@
 .botones-start-container {
   display: flex;
   flex-direction: row; 
-  margin: 0 auto;
-  width: 100vw;
   justify-content: space-between;
+  width: 100vw;
 }
 
 /* ANIMACION Y CSS DEL BOTON INICIAR CALCULADORA */
-#start {
+#start {    
     text-align: center;
     font-weight: bold;
     width: 300px;
     position: relative;
     padding: 10px 20px;
-    margin: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1em;

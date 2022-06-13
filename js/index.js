@@ -236,33 +236,133 @@ calcular.addEventListener('click', () =>{
 
 
 // INICIO CONVERSOR **************************************************************** 
-let usd = document.querySelector('.Inputusd').value;
-let btc = document.querySelector('.Inputbtc').value;
-// let convertirusd = document.querySelector('.')
-// function conversorusd (){
-// }
+const resultadosguardadosconversorusd = []   // ARRAY DONDE SE GUARDAN LOS RESULTADOS CALCULADOS POR EL CONVERSOR
+const resultadosguardadosconversorbtc = []   // ARRAY DONDE SE GUARDAN LOS RESULTADOS CALCULADOS POR EL CONVERSOR
 
-const valorusdBoton = document.querySelector('.Convertir-usd');
-const valorusdContainer = document.querySelector('.Convertir-usd-container');
+// FUNCION PARA LIMPIAR HISTORIAL DEL CONVERSOR
 
-function mostrarusd(e) {
-  const valorusd = parseInt(document.querySelector('.Inputusd').value);
-  console.log(valorusd)
+const ConversorLista = document.querySelector('.ConversorLista')
+const BotonLimpiarConversor = document.querySelector('.Limpiar-historial-conversor')
+function Limpiarconversor(e){
+  resultadosguardadosconversorbtc.splice(0)
+  resultadosguardadosconversorusd.splice(0)
 }
 
-valorusdBoton.addEventListener('click', () => {
-  mostrarusd();
-});
+BotonLimpiarConversor.addEventListener('click', (e) =>{
+  ConversorLista.innerHTML = '';
+  Limpiarconversor()
+})
+
+
+const Inputusd = document.querySelector('.Inputusd').value;
+const Inputbtc = document.querySelector('.Inputbtc').value;
 
 fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
-  .then(response => response.json()) //transformo el response a .json
-  .then(datos => displayDatos(datos)) // guardo datos en una variable y abajo la muestro con console.log 
+.then(response => response.json()) //transformo el response a .json
+.then(datos => displayDatos(datos)) // guardo datos en una variable y abajo la muestro con console.log 
+
+let usd // variable usd API
 
 const displayDatos = datos => {
+  usd = datos.bpi.USD.rate_float; //Dando valor a la variable usd usando los datos de la API
   const valoractualusd = document.querySelector('.Equivalenciausd')
-  const usd = datos.bpi.USD.rate_float;
   valoractualusd.innerHTML = usd + ' USD';
-  console.log (datos);
-  console.log (datos.bpi.USD.symbol);
-
+  const Equivalenciabtc = document.querySelector('.Equivalenciabtc')
+  let operacion = (1*1) / usd  
+  let redondeado = operacion.toFixed(6)
+  Equivalenciabtc.innerHTML = redondeado + ' BTC';
 }
+
+// CONVERSOR (INPUT USD)
+function conversionUSD(e) {  
+
+  // FUNCION P/ GUARDAR Y MOSTRAR RESULTADOS DEL CONVERSOR USD
+  function ResultadosConversorGuardadosUSD() {
+    const ConversorLista = document.querySelector('.ConversorLista');
+    resultadosguardadosconversorusd.forEach((item) => {
+    const li = document.createElement("li");
+    li.innerHTML = item + ' BTC';
+    ConversorLista.appendChild(li);
+    });
+  }
+  
+  // *******************************************************************
+
+  // CALCULO (DE USD A BTC)
+  const ConversorLista = document.querySelector('.ConversorLista');
+  const Inputusd = document.querySelector('.Inputusd').value;  
+  let resultadoConversor = (Inputusd*Inputusd) / usd  
+  let redondeado = resultadoConversor.toFixed(6)
+  const resultado = document.querySelector('.ResultadoBTC').textContent = redondeado + ' BTC'
+  resultadosguardadosconversorusd.push(redondeado);
+  console.log(resultadosguardadosconversorusd + 'BTC')  
+  ResultadosConversorGuardadosUSD();
+  resultadosguardadosconversorusd.splice(0);
+  // *******************************************************************
+}
+
+// 1btc = usd (variable de la API)
+// Value de Inputbtc = X USD
+// usd * Value de Inputbtc / 1 btc 
+
+// CONVERSOR (INPUT BTC)
+function conversionBTC(e){
+
+  // FUNCION P/ GUARDAR Y MOSTRAR RESULTADOS DEL CONVERSOR BTC
+  function ResultadosConversorGuardadosBTC() {
+    const ConversorLista = document.querySelector('.ConversorLista');
+
+    resultadosguardadosconversorbtc.forEach((item) => {
+    const li = document.createElement("li");
+    li.innerHTML = item + ' USD';
+    ConversorLista.appendChild(li);
+    });
+  }
+  // *******************************************************************
+  
+  // CALCULO (DE BTC A USD)
+  const ConversorLista = document.querySelector('.ConversorLista');
+  const Inputbtc = document.querySelector('.Inputbtc').value;  
+  let resultadoConversorBTC = (usd*Inputbtc)  
+  // console.log(resultadoConversorBTC);  
+  let redondeado = resultadoConversorBTC.toFixed(6)
+  const resultado = document.querySelector('.ResultadoUSD').textContent = redondeado + ' USD'
+  resultadosguardadosconversorbtc.push(redondeado);
+  console.log(resultadosguardadosconversorbtc + 'USD')
+  ResultadosConversorGuardadosBTC();
+  resultadosguardadosconversorbtc.splice(0);
+}
+// *******************************************************************
+
+// BOTONES DE CONVERSION (USD & BTC)
+const BotonConversorUSD = document.querySelector('.BotonConversorUSD')
+BotonConversorUSD.addEventListener('click', () => {
+  conversionUSD();
+});
+const BotonConversorBTC = document.querySelector('.BotonConversorBTC')
+BotonConversorBTC.addEventListener('click', () => {
+  conversionBTC();
+});
+// ***************************************************************
+
+
+
+const startConversor = document.getElementById('start-conversor')
+const datosporunidadContainer = document.querySelector('.datosporunidad-container')
+const conversor = document.querySelector('.conversor')
+const datosconversor = document.querySelector('.datos-conversor')
+const Botonesconversorcontainer = document.querySelector('.Botones-conversor-container')
+const ConversorListacontainer = document.querySelector('.ConversorLista-container')
+datosporunidadContainer.style.visibility = 'hidden'
+conversor.style.visibility = 'hidden'
+Botonesconversorcontainer.style.visibility = 'hidden'
+ConversorListacontainer.style.visibility = 'hidden'
+datosconversor.style.visibility = 'hidden'
+
+startConversor.addEventListener('click', () => {
+  datosporunidadContainer.style.visibility = 'visible'
+  conversor.style.visibility = 'visible'
+  Botonesconversorcontainer.style.visibility = 'visible'
+  ConversorListacontainer.style.visibility = 'visible'
+  datosconversor.style.visibility = 'visible'
+})

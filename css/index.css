@@ -30,9 +30,8 @@ input, select, textarea {
 .botones-start-container {
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
-  width: 100vw;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100vw; }
 
 /* ANIMACION Y CSS DEL BOTON INICIAR CALCULADORA */
 #start, #start-conversor, #start-recomendaciones {
@@ -41,7 +40,8 @@ input, select, textarea {
   width: 300px;
   position: relative;
   padding: 10px 20px;
-  margin: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1em;
@@ -184,8 +184,8 @@ input, select, textarea {
   transition-delay: 0s; }
 
 /* FIN BOTON START RECOMENDACIONES ******************************************************************** */
-.configuracion {
-  width: 200px;
+.configuracion, .botonInfo-listado-container, .botonInfo-container, .conversorInfo-container {
+  width: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,10 +194,11 @@ input, select, textarea {
   font-weight: bold;
   background-color: #828282;
   border: transparent;
-  opacity: 0.6;
-  border-radius: 10px; }
+  opacity: 0.7;
+  border-radius: 10px;
+  text-align: center; }
 
-.configuracion-expandir, .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo, .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir, .conversorInfo-container #mostrarInfoConversor, .conversorInfo-container #conversor-expandir, .botonInfo-listado-container #mostrarInfo-listado, .botonInfo-listado-container #expandir-listado {
+.configuracion-expandir {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,35 +211,16 @@ input, select, textarea {
   opacity: 0.6;
   border-radius: 10px; }
 
-/* BOTONES DE INFO */
-.container_informaciones, .container_informaciones .botonInfo-container, .container_informaciones .conversorInfo-container, .container_informaciones .botonInfo-listado-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem; }
-  .container_informaciones .botonInfo-container, .container_informaciones .botonInfo-container .botonInfo-container, .container_informaciones .conversorInfo-container .botonInfo-container, .container_informaciones .botonInfo-listado-container .botonInfo-container, .container_informaciones .conversorInfo-container, .container_informaciones .botonInfo-container .conversorInfo-container, .container_informaciones .conversorInfo-container .conversorInfo-container, .container_informaciones .botonInfo-listado-container .conversorInfo-container, .container_informaciones .botonInfo-listado-container, .container_informaciones .botonInfo-container .botonInfo-listado-container, .container_informaciones .conversorInfo-container .botonInfo-listado-container, .container_informaciones .botonInfo-listado-container .botonInfo-listado-container {
-    width: 330px;
-    flex-direction: column;
-    margin-right: 1rem; }
-    .container_informaciones .botonInfo-container #mostrarInfo, .container_informaciones .conversorInfo-container #mostrarInfo, .container_informaciones .botonInfo-listado-container #mostrarInfo {
-      gap: 0; }
-    .container_informaciones .botonInfo-container #expandir, .container_informaciones .conversorInfo-container #expandir, .container_informaciones .botonInfo-listado-container #expandir {
-      gap: 0; }
-      .container_informaciones .botonInfo-container #expandir:hover, .container_informaciones .conversorInfo-container #expandir:hover, .container_informaciones .botonInfo-listado-container #expandir:hover {
-        color: #828282; }
+.botonInfo-listado-container, .botonInfo-container, .conversorInfo-container {
+  flex-direction: column; }
 
-.conversorInfo-container #mostrarInfoConversor {
-  gap: 0; }
-
-.conversorInfo-container #conversor-expandir:hover {
-  color: #828282; }
-
-.botonInfo-listado-container #mostrarInfo-listado {
-  gap: 0; }
-
-.botonInfo-listado-container #expandir-listado:hover {
-  color: #828282; }
+#expandir-listado, #conversor-expandir, #expandir {
+  background-color: transparent !important;
+  border: transparent;
+  font-weight: bold;
+  text-transform: uppercase; }
+  #expandir-listado:hover, #conversor-expandir:hover, #expandir:hover {
+    color: #ececec; }
 
 /* TITULO Y ANIMACION */
 #titulo1 {
@@ -269,14 +251,9 @@ input, select, textarea {
 .historialLista {
   width: 300px;
   margin-top: 1rem;
-  margin-left: 10px;
-  margin-right: 10px;
   background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
   border-radius: 10px;
   opacity: 0.5; }
-
-.historial-resultados-container, .seccion-cuotas-container {
-  margin-right: 1.2rem; }
 
 .historial-resultados-container, .seccion-cuotas-container, .seccion-cuotas-container {
   display: flex;
@@ -294,12 +271,11 @@ input, select, textarea {
 .botones-container1 {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 5em;
   margin-top: 1rem;
   padding-bottom: 1rem; }
-
-.mostrar {
-  margin-left: 3em; }
 
 .mostrar, .ocultar {
   width: 4rem;
@@ -315,10 +291,13 @@ input, select, textarea {
   color: #828282; }
 
 .start-calculador-container {
-  margin-right: 10px; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 0.5rem; }
 
 #calculador, #numero {
-  margin-left: 1.2rem;
   background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
   border-radius: 10px;
   opacity: 0.7;
@@ -364,8 +343,6 @@ input, select, textarea {
 .seccion-cuotas {
   list-style-type: decimal-leading-zero;
   margin-top: 1rem;
-  margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 1rem;
   background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
   border-radius: 10px;
@@ -450,12 +427,11 @@ nav {
     nav .nav-item:hover:after {
       width: 100%; }
 
-.d-flex, .datosporunidad-container, .Unidadbtc-container, .Unidadusd-container, .start-conversor-container, .start-conversor-container .conversor {
+.d-flex, .datosporunidad-container, .Unidadbtc-container, .Unidadusd-container, .start-conversor-container, .start-conversor-container .conversor, .Botones-conversor-container, .ConversorLista-container .Botones-conversor-historial-container {
   display: flex;
-  justify-content: center;
   align-items: center; }
 
-.configuracion-input, .datos-conversor, .start-conversor-container .conversor .Inputbtc, .start-conversor-container .conversor .Inputusd, .Convertir-usd, .Convertir-btc {
+.configuracion-input, .datos-conversor, .start-conversor-container .conversor .Inputbtc, .start-conversor-container .conversor .Inputusd, .BotonConversorBTC, .BotonConversorUSD, .ResultadoBTC, .ResultadoUSD, .ConversorLista-container {
   width: 150px;
   display: flex;
   justify-content: center;
@@ -466,8 +442,22 @@ nav {
   font-weight: bold;
   background-color: #828282;
   border: transparent;
-  opacity: 0.6;
+  opacity: 0.9;
   border-radius: 10px; }
+
+.configuracion-botones, .ConversorLista-container .Limpiar-historial-conversor {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0rem;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #828282;
+  border: transparent;
+  opacity: 0.9;
+  border-radius: 10px;
+  text-align: center; }
 
 .datos-conversor {
   width: 300px;
@@ -487,10 +477,44 @@ nav {
   .start-conversor-container .conversor {
     gap: 0.3em; }
 
-.Convertir-usd, .Convertir-btc {
-  margin-top: 0.3rem; }
-  .Convertir-usd:hover, .Convertir-btc:hover {
+.Botones-conversor-container {
+  flex-direction: row;
+  gap: 0.5em; }
+
+.BotonConversorBTC, .BotonConversorUSD {
+  margin-top: 0.5rem;
+  width: 148px; }
+  .BotonConversorBTC:hover, .BotonConversorUSD:hover {
     color: #ececec; }
+
+.ResultadoBTC, .ResultadoUSD {
+  margin-top: 0.5rem; }
+
+.ConversorLista-container {
+  list-style-type: decimal;
+  flex-direction: column;
+  width: 300px;
+  margin-top: 0.5rem; }
+  .ConversorLista-container .conversorListah3 {
+    margin-top: 1rem;
+    text-transform: uppercase; }
+  .ConversorLista-container .Limpiar-historial-conversor {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid dimgray; }
+    .ConversorLista-container .Limpiar-historial-conversor:hover {
+      color: #ececec; }
+  .ConversorLista-container .Botones-conversor-historial-container {
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 2em; }
+
+.startRecomendaciones-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .configuracion-flex, main, .derecha-container, .saludo-y-boton, #Formulario {
   display: flex;

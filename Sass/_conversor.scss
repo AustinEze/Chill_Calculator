@@ -5,7 +5,7 @@
 }
 
 .configuracion-input {
-    width: 150px;
+    width: 180px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@
 
 .datos-conversor{
     @extend .configuracion-input;
-    width: 300px;
+    width: 370px;
     margin-bottom: 0.5rem;
     flex-direction: column;
 }
@@ -83,7 +83,7 @@
 .BotonConversorBTC, .BotonConversorUSD {
     @extend .configuracion-input;
     margin-top: 0.5rem;
-    width: 148px;
+    width: 180px;
         &:hover{
             color: $hover-color;
         }    
@@ -98,7 +98,7 @@
     @extend .configuracion-input;
     list-style-type: decimal;
     flex-direction: column;
-    width: 300px;    
+    width: 370px;    
     margin-top: 0.5rem;
         .conversorListah3{
             margin-top: 1rem;

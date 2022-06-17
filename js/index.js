@@ -95,7 +95,8 @@ function calculadorCuotas(){
   let cuotas = 1;
   for (let cuotas = 1; cuotas < 13; cuotas++) {
     PrecioCuotas = historialresultados[0] / cuotas + 1;
-    historialcuotas.push(PrecioCuotas);
+    redondeado = PrecioCuotas.toFixed(2)
+    historialcuotas.push(redondeado);
     console.log(PrecioCuotas);
     if (cuotas == 12) {
       let cuotasMontoActual = document.querySelector(".cuotasMontoActual"); 
@@ -140,6 +141,8 @@ botoncuotas.addEventListener('click', () => {
 // *********************************************
 
 const saludo = document.querySelector(".GuardarNombre");
+const maincontainer = document.querySelector(".main-container")
+maincontainer.style.visibility = 'hidden'
 
 saludo.addEventListener("click", saludar);
 function saludar(e) {
@@ -151,6 +154,7 @@ function saludar(e) {
     let contenido = document.createElement("h3");
     contenido.textContent = `Bienvenid@ ${ingresaNombre}, es un placer conocerte ;).`;
     titulo.appendChild(contenido);
+    maincontainer.style.visibility = 'visible'
 
     Toastify({ 
       text: "🤖 Bienvenido y gracias por usar Chill cave . . . 🤖",
@@ -167,9 +171,7 @@ function saludar(e) {
       } 
     }).showToast();
 
-  }
-  
-
+  }  
   ingresaNombre = localStorage.setItem("Nombre", ingresaNombre);
 }
 
@@ -346,7 +348,6 @@ BotonConversorBTC.addEventListener('click', () => {
 // ***************************************************************
 
 
-
 const startConversor = document.getElementById('start-conversor')
 const datosporunidadContainer = document.querySelector('.datosporunidad-container')
 const conversor = document.querySelector('.conversor')
@@ -366,3 +367,58 @@ startConversor.addEventListener('click', () => {
   ConversorListacontainer.style.visibility = 'visible'
   datosconversor.style.visibility = 'visible'
 })
+
+
+// RECOMENDACIONES ARRAY LISTA 
+const startrecomendaciones = document.getElementById('start-recomendaciones')
+const recomendacioneslista = document.querySelector('.recomendaciones-lista')
+const recomendacioneslistacontainer = document.querySelector('.recomendaciones-lista-container')
+recomendacioneslistacontainer.style.visibility = 'hidden'
+
+startrecomendaciones.addEventListener('click', () =>{
+  recomendacioneslistacontainer.style.visibility = 'visible'
+})
+
+function tierlistFunction() {
+    const recomendacioneslista = document.querySelector('.recomendaciones-lista');
+    tierlistarray.forEach((item) => {
+        const li = document.createElement("li");
+        li.innerHTML = item
+        recomendacioneslista.appendChild(li);
+      });
+    }
+    
+    const tierlistheaders = ['Moneda', 'Precio', '1h', '24h', '7d'] 
+    const tierlistarray = [] 
+
+fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=1h')
+  .then(response => response.json()) //transformo el response a .json
+  .then(datalist => {
+    console.log(datalist)
+    // let redondeado = datalist[0].price_change_percentage_1h_in_currency.toFixed(1)  && datalist[0].price_change_percentage_24h.toFixed(1)
+    // let redondeado2 = datalist[1].price_change_percentage_1h_in_currency.toFixed(1) && datalist[1].price_change_percentage_24h.toFixed(1)
+    // let redondeado3 = datalist[2].price_change_percentage_1h_in_currency.toFixed(1) && datalist[2].price_change_percentage_24h.toFixed(1)
+    // let redondeado4 = datalist[3].price_change_percentage_1h_in_currency.toFixed(1) && datalist[3].price_change_percentage_24h.toFixed(1)
+    // let redondeado5 = datalist[4].price_change_percentage_1h_in_currency.toFixed(1) && datalist[4].price_change_percentage_24h.toFixed(1)
+    // let redondeado6 = datalist[5].price_change_percentage_1h_in_currency.toFixed(1) && datalist[5].price_change_percentage_24h.toFixed(1)
+    // let redondeado7 = datalist[6].price_change_percentage_1h_in_currency.toFixed(1) && datalist[6].price_change_percentage_24h.toFixed(1)
+    // let redondeado8 = datalist[7].price_change_percentage_1h_in_currency.toFixed(1) && datalist[7].price_change_percentage_24h.toFixed(1)
+    // let redondeado9 = datalist[8].price_change_percentage_1h_in_currency.toFixed(1) && datalist[8].price_change_percentage_24h.toFixed(1)
+    // let redondeado10 = datalist[9].price_change_percentage_1h_in_currency.toFixed(1) && datalist[9].price_change_percentage_24h.toFixed(1)
+    tierlistarray.push('1) ' + datalist[0].name + ' (' + datalist[0].symbol + ')' + ': ' + datalist[0].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[0].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[0].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('2) ' + datalist[1].name + ' (' + datalist[1].symbol + ')' + ': ' + datalist[1].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[1].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[1].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('3) ' + datalist[2].name + ' (' + datalist[2].symbol + ')' + ': ' + datalist[2].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[2].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[2].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('4) ' + datalist[3].name + ' (' + datalist[3].symbol + ')' + ': ' + datalist[3].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[3].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[3].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('5) ' + datalist[4].name + ' (' + datalist[4].symbol + ')' + ': ' + datalist[4].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[4].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[4].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('6) ' + datalist[5].name + ' (' + datalist[5].symbol + ')' + ': ' + datalist[5].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[5].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[5].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('7) ' + datalist[6].name + ' (' + datalist[6].symbol + ')' + ': ' + datalist[6].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[6].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[6].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('8) ' + datalist[7].name + ' (' + datalist[7].symbol + ')' + ': ' + datalist[7].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[7].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[7].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('9) ' + datalist[8].name + ' (' + datalist[8].symbol + ')' + ': ' + datalist[8].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[8].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[8].price_change_percentage_24h.toFixed(2) + '%')
+    tierlistarray.push('10) ' + datalist[9].name + '  (' + datalist[9].symbol + ')' + ': ' + datalist[9].current_price + 'USD ' + '\xa0\xa0' + '1h: '+ datalist[9].price_change_percentage_1h_in_currency.toFixed(2) + '% / 24h: ' + datalist[9].price_change_percentage_24h.toFixed(2) + '%')
+    
+    console.log(tierlistarray)
+    tierlistFunction();
+  })  
+
+
+

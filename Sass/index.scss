@@ -28,64 +28,73 @@ main {
 
 .derecha-container {
     @extend .configuracion-flex;
+
+        .saludo-y-boton {
+            @extend .configuracion-flex;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+        }   
+
+        .presentacion-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border-radius:10px;
+
+                .IngresaNombre{
+                    width: 300px;
+                    background:$background-gradient;
+                    border-radius: 20px;
+                    text-align: center;
+                    border: transparent;
+                    opacity: 0.8;
+                }
+                
+                #identificador {
+                    margin-bottom: 0.5rem;
+                    width: 300px;
+                    background:$background-gradient;
+                    border-radius: 20px;
+                    text-align: center;
+                    opacity: 0.5;
+                }        
+        
+                .GuardarNombre{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 0.5rem;
+                    width: 300px;
+                    font-size: 1em;  
+                    font-weight: bold;
+                    border: transparent;
+                    opacity: 0.8;
+                    background-color: $background-color;
+                    border-radius:10px;
+                        &:hover{
+                            color: $hover-color;
+                        }        
+                }
+        
+                #Formulario{
+                    @extend .configuracion-flex;        
+                }
+        }
 }
 
-.saludo-y-boton {
-    @extend .configuracion-flex;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-
-.presentacion-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    border-radius:10px;
-
-}
-
-
-.GuardarNombre:hover{
-    color: $background-color;
-}
 
 
 
-#Formulario{
-    @extend .configuracion-flex;
-
-}
-
-.IngresaNombre{
-    width: 300px;
-    background:$background-gradient;
-    border-radius: 20px;
-    text-align: center;
-    border: transparent;
-    opacity: 0.5;
-}
 
 
-.GuardarNombre{
-    display: flex;
-    align-items: center;
-    margin-top: 0.5rem;
-    width: 300px;
-    font-size: 1em;  
-    font-weight: bold;
-    border: transparent;
-    opacity: 0.5;
-    background-color: rgb(82, 82, 82);
-    border-radius:10px;
-}
 
-#identificador {
-    margin-bottom: 0.5rem;
-    width: 300px;
-    background:$background-gradient;
-    border-radius: 20px;
-    text-align: center;
-    opacity: 0.5;
-}
+
+
+
+
+
+
+
+
+
+
 

@@ -33,24 +33,20 @@
     </div>
     <!-- ************************************************************** -->
 
-
-    <div class="container_informaciones">
-      </div>
-      
-    
-    </div>
-    
     <main class="main-container">
       
-      <!-- Calculadora  -->
       <div class="botones-start-container"> 
 
         <div class="startRecomendaciones-container">
           <div class='botonInfo-listado-container'>
-            <button id="expandir-listado" name="expand">Acerca de las recomendaciones</button>
-            <p id="mostrarInfo-listado"  style="display:none;">Este listado se hizo con el fin de informar de forma simple y rápida sobre las mejores opciones de empresas para invertir en criptomonedas según las acciones e informaciones actuales del mercado. <br> NOTA: Todo lo visto o aplicado en este proyecto es con simple fines de práctica y aprendizaje.</p>      
+            <button id="expandir-listado" name="expand">Acerca del TOP 10 y uso</button>
+            <p id="mostrarInfo-listado"  style="display:none;">Este listado se hizo con el fin de informar de forma simple y rápida sobre 10 tipos de criptomonedas existentes en el mercado sobre las cuales te podría interesar invertir. <br> NOTA: Todo lo visto o aplicado en este proyecto es con simple fines de práctica y aprendizaje. <br><b>INDICACIONES:</b> La lista cuenta con el valor actual, y el porcentaje de cambio del valor de cada moneda en base a la ultima hora y a las pasadas 24 horas. Los datos se actualizan cada hora.</p>      
           </div>
-          <button id="start-recomendaciones">Iniciar recomendaciones </button><!-- Boton para iniciar recomendaciones  --> 
+          <button id="start-recomendaciones">Iniciar TOP 10 </button><!-- Boton para iniciar recomendaciones  --> 
+          <div class='recomendaciones-lista-container'>
+            <h3 class="recomendaciones-titulo">TOP 10 CRIPTOMONEDAS:</h3>
+            <ul class="recomendaciones-lista" border="5" cellspacing="2" cellpadding='1'></ul>              
+          </div>
         </div>
         
         <!-- INICIO DE CONVERSOR  -->
@@ -161,9 +157,6 @@
       </div>      
     </main>
       <!-- ************************************************************** -->
-
-    
-    <!-- ************************************************************** -->
 
     <script src="js/index.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

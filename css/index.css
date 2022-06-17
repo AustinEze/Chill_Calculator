@@ -248,47 +248,19 @@ input, select, textarea {
     text-shadow: 0 0 10px #6b6b6b, 0 0 20px #6b6b6b, 0 0 40px #6b6b6b, 0 0 80px #6b6b6b, 0 0 160px #6b6b6b; } }
 
 /* ******************************************************************************** */
-.historialLista {
-  width: 300px;
-  margin-top: 1rem;
-  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+.configuracion-calculador, .start-calculador-container #calculador, .start-calculador-container #calculador #numero, .start-calculador-container #calculador .calcular, .start-calculador-container #calculador #numero .calcular, .start-calculador-container .historial-resultados-container .historialLista, .start-calculador-container .historial-resultados-container .LimpiarResultados, .start-calculador-container .seccion-cuotas, .start-calculador-container .seccion-cuotas .botonCuotas, .start-calculador-container .seccion-cuotas .LimpiarCuotas, .start-calculador-container .seccion-cuotas .botones-container1 .mostrar, .start-calculador-container .seccion-cuotas .botones-container1 .ocultar {
+  background: #828282;
+  opacity: 0.8;
   border-radius: 10px;
-  opacity: 0.5; }
-
-.historial-resultados-container, .seccion-cuotas-container, .seccion-cuotas-container {
-  display: flex;
-  justify-content: flex-end;
+  width: 370px;
   text-align: center; }
 
-#historial {
-  display: flex;
-  flex-direction: column; }
-
-#historial li {
+.configuracion-botones, .ConversorLista-container .Limpiar-historial-conversor {
+  width: 250px;
   margin-top: 0.5rem;
-  font-weight: bold; }
-
-.botones-container1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 5em;
-  margin-top: 1rem;
-  padding-bottom: 1rem; }
-
-.mostrar, .ocultar {
-  width: 4rem;
+  font-size: 1em;
   font-weight: bold;
-  border: transparent;
-  background-color: #525252;
-  border-radius: 10px; }
-
-.mostrar:hover {
-  color: #828282; }
-
-.ocultar:hover {
-  color: #828282; }
+  border: 2px solid dimgray; }
 
 .start-calculador-container {
   display: flex;
@@ -296,100 +268,89 @@ input, select, textarea {
   align-items: center;
   flex-direction: column;
   margin-right: 0.5rem; }
-
-#calculador, #numero {
-  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
-  border-radius: 10px;
-  opacity: 0.7;
-  text-align: center;
-  width: 300px; }
-
-#numero {
-  opacity: 1;
-  margin-left: 0;
-  border: transparent;
-  background-color: transparent; }
-
-.calcular {
-  margin-top: 0.5rem;
-  width: 300px;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 10px;
-  border: transparent;
-  background-color: transparent; }
-
-.calcular:hover {
-  color: #828282; }
-
-.resultado {
-  font-size: 1em;
-  font-weight: bold;
-  width: 300px;
-  margin-top: 0.5rem;
-  border-radius: 30px; }
-
-.botonCuotas {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 7em;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 10px;
-  border: transparent;
-  background-color: #525252;
-  opacity: 1; }
-
-.seccion-cuotas {
-  list-style-type: decimal-leading-zero;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
-  border-radius: 10px;
-  opacity: 0.5;
-  width: 300px;
-  text-align: center; }
-
-.cuotasMontoActual {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-weight: bold; }
-
-#cuotas {
-  list-style-type: none; }
-
-#cuotas li {
-  font-weight: bold; }
-
-.cuotah5 {
-  margin-top: 1rem;
-  margin-bottom: 1rem; }
-
-.botonCuotas:hover {
-  color: #828282; }
-
-.LimpiarCuotas {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  width: 7em;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 10px;
-  border: transparent;
-  background-color: #525252; }
-
-.LimpiarCuotas:hover {
-  color: #828282; }
-
-.LimpiarResultados {
-  margin-top: 0.5rem;
-  width: 300px;
-  font-size: 1em;
-  font-weight: bold;
-  border-radius: 10px;
-  border: transparent;
-  background-color: #525252; }
+  .start-calculador-container #calculador, .start-calculador-container #calculador #numero {
+    margin-bottom: 0.5rem; }
+    .start-calculador-container #calculador #numero {
+      border: 2px solid dimgray;
+      margin-left: 0;
+      background-color: transparent; }
+    .start-calculador-container #calculador .resultado, .start-calculador-container #calculador #numero .resultado {
+      font-size: 1em;
+      font-weight: bold;
+      width: 370px;
+      margin-top: 0.2rem;
+      border-radius: 30px; }
+    .start-calculador-container #calculador .calcular, .start-calculador-container #calculador #numero .calcular {
+      width: 250px;
+      margin-top: 0.2rem;
+      font-size: 1em;
+      font-weight: bold;
+      border: 2px solid dimgray; }
+      .start-calculador-container #calculador .calcular:hover, .start-calculador-container #calculador #numero .calcular:hover {
+        color: #ececec; }
+  .start-calculador-container .historial-resultados-container, .start-calculador-container .seccion-cuotas-container {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center; }
+  .start-calculador-container .historial-resultados-container .historialLista {
+    padding-bottom: 0.2rem; }
+    .start-calculador-container .historial-resultados-container .historialLista #historial {
+      display: flex;
+      flex-direction: column;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      opacity: 1; }
+      .start-calculador-container .historial-resultados-container .historialLista #historial #historial li {
+        margin-top: 0.5rem; }
+  .start-calculador-container .historial-resultados-container .LimpiarResultados {
+    width: 250px;
+    margin-top: 0.5rem;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px solid dimgray; }
+  .start-calculador-container .seccion-cuotas {
+    list-style-type: decimal-leading-zero;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+    .start-calculador-container .seccion-cuotas .botonCuotas, .start-calculador-container .seccion-cuotas .LimpiarCuotas {
+      width: 250px;
+      margin-top: 0.5rem;
+      font-size: 1em;
+      font-weight: bold;
+      border: 2px solid dimgray; }
+      .start-calculador-container .seccion-cuotas .botonCuotas:hover, .start-calculador-container .seccion-cuotas .LimpiarCuotas:hover {
+        color: #ececec; }
+    .start-calculador-container .seccion-cuotas .cuotah5 {
+      font-size: 1em;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .start-calculador-container .seccion-cuotas .cuotasMontoActual {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-weight: bold; }
+    .start-calculador-container .seccion-cuotas #cuotas {
+      list-style-type: none; }
+    .start-calculador-container .seccion-cuotas #cuotas li {
+      font-weight: bold; }
+    .start-calculador-container .seccion-cuotas .LimpiarCuotas:hover {
+      color: #ececec; }
+    .start-calculador-container .seccion-cuotas .botones-container1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5em;
+      margin-top: 1rem;
+      padding-bottom: 1rem; }
+      .start-calculador-container .seccion-cuotas .botones-container1 .mostrar, .start-calculador-container .seccion-cuotas .botones-container1 .ocultar {
+        width: 100px;
+        margin-top: 0.5rem;
+        font-size: 1em;
+        font-weight: bold;
+        border: 2px solid dimgray; }
+        .start-calculador-container .seccion-cuotas .botones-container1 .mostrar:hover, .start-calculador-container .seccion-cuotas .botones-container1 .ocultar:hover {
+          color: #ececec; }
 
 .Toastify {
   border-radius: 10px; }
@@ -432,7 +393,7 @@ nav {
   align-items: center; }
 
 .configuracion-input, .datos-conversor, .start-conversor-container .conversor .Inputbtc, .start-conversor-container .conversor .Inputusd, .BotonConversorBTC, .BotonConversorUSD, .ResultadoBTC, .ResultadoUSD, .ConversorLista-container {
-  width: 150px;
+  width: 180px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,7 +421,7 @@ nav {
   text-align: center; }
 
 .datos-conversor {
-  width: 300px;
+  width: 370px;
   margin-bottom: 0.5rem;
   flex-direction: column; }
 
@@ -483,7 +444,7 @@ nav {
 
 .BotonConversorBTC, .BotonConversorUSD {
   margin-top: 0.5rem;
-  width: 148px; }
+  width: 180px; }
   .BotonConversorBTC:hover, .BotonConversorUSD:hover {
     color: #ececec; }
 
@@ -493,7 +454,7 @@ nav {
 .ConversorLista-container {
   list-style-type: decimal;
   flex-direction: column;
-  width: 300px;
+  width: 370px;
   margin-top: 0.5rem; }
   .ConversorLista-container .conversorListah3 {
     margin-top: 1rem;
@@ -515,8 +476,23 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .startRecomendaciones-container .recomendaciones-lista-container {
+    width: 370px;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #828282;
+    border: transparent;
+    opacity: 0.9;
+    border-radius: 10px; }
+    .startRecomendaciones-container .recomendaciones-lista-container .recomendaciones-titulo {
+      text-align: center; }
+    .startRecomendaciones-container .recomendaciones-lista-container .recomendaciones-lista {
+      list-style-type: none; }
+      .startRecomendaciones-container .recomendaciones-lista-container .recomendaciones-lista li {
+        margin: 0.5rem;
+        text-transform: uppercase; }
 
-.configuracion-flex, main, .derecha-container, .saludo-y-boton, #Formulario {
+.configuracion-flex, main, .derecha-container, .derecha-container .saludo-y-boton, .derecha-container .presentacion-container #Formulario {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -529,43 +505,39 @@ main {
   border-radius: 10px;
   gap: 1em; }
 
-.saludo-y-boton {
+.derecha-container .saludo-y-boton {
   margin-bottom: 2rem;
   margin-top: 2rem; }
 
-.presentacion-container {
+.derecha-container .presentacion-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   border-radius: 10px; }
-
-.GuardarNombre:hover {
-  color: #828282; }
-
-.IngresaNombre {
-  width: 300px;
-  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
-  border-radius: 20px;
-  text-align: center;
-  border: transparent;
-  opacity: 0.5; }
-
-.GuardarNombre {
-  display: flex;
-  align-items: center;
-  margin-top: 0.5rem;
-  width: 300px;
-  font-size: 1em;
-  font-weight: bold;
-  border: transparent;
-  opacity: 0.5;
-  background-color: #525252;
-  border-radius: 10px; }
-
-#identificador {
-  margin-bottom: 0.5rem;
-  width: 300px;
-  background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
-  border-radius: 20px;
-  text-align: center;
-  opacity: 0.5; }
+  .derecha-container .presentacion-container .IngresaNombre {
+    width: 300px;
+    background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+    border-radius: 20px;
+    text-align: center;
+    border: transparent;
+    opacity: 0.8; }
+  .derecha-container .presentacion-container #identificador {
+    margin-bottom: 0.5rem;
+    width: 300px;
+    background: linear-gradient(347deg, #555555 0%, #828282 55%, #c8c8c8 100%);
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0.5; }
+  .derecha-container .presentacion-container .GuardarNombre {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    width: 300px;
+    font-size: 1em;
+    font-weight: bold;
+    border: transparent;
+    opacity: 0.8;
+    background-color: #828282;
+    border-radius: 10px; }
+    .derecha-container .presentacion-container .GuardarNombre:hover {
+      color: #ececec; }

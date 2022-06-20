@@ -235,7 +235,7 @@ calcular.addEventListener('click', () =>{
     } // Callback after click
   }).showToast();
 })
-
+ 
 
 // INICIO CONVERSOR **************************************************************** 
 const resultadosguardadosconversorusd = []   // ARRAY DONDE SE GUARDAN LOS RESULTADOS CALCULADOS POR EL CONVERSOR

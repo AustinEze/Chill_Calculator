@@ -8,7 +8,7 @@
 @import 'navbar';
 @import 'conversor';
 @import 'recomendaciones';
-
+@import 'pages2al4';
 .configuracion-flex{
     display:flex;
     align-content: center;
@@ -79,6 +79,23 @@ main {
                     @extend .configuracion-flex;        
                 }
         }
+}
+
+
+footer{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+        h3{
+            background: $background-gradient;
+            border-radius: 15px;
+            opacity: 0.8;
+            width: 200px;
+            text-align: center;
+        }
+    
 }
 
 

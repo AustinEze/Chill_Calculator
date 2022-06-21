@@ -24,6 +24,7 @@
     "nodemon": "^2.0.16"
   },
   "dependencies": {
+    "remixicon": "^2.5.0",
     "toastify-js": "^1.11.2"
   }
 }

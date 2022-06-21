@@ -236,7 +236,6 @@ calcular.addEventListener('click', () =>{
   }).showToast();
 })
  
-
 // INICIO CONVERSOR **************************************************************** 
 const resultadosguardadosconversorusd = []   // ARRAY DONDE SE GUARDAN LOS RESULTADOS CALCULADOS POR EL CONVERSOR
 const resultadosguardadosconversorbtc = []   // ARRAY DONDE SE GUARDAN LOS RESULTADOS CALCULADOS POR EL CONVERSOR

@@ -82,7 +82,46 @@ main {
 }
 
 
+@media only screen and (max-width: 1140px) {
+    
+    .navbar{
+        min-width: 100vw;
+    }
+    
+    #titulo1 {
+        text-align: center;
+        font-size: 1em;
+        // min-width: 320px; 
+    }
+    
 
+    .botones-start-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .startRecomendaciones-container, .recomendaciones-lista-container{
+        visibility: visible !important;
+    }
+
+    .start-conversor-container, .datos-conversor, .datosporunidad-container, .Unidadusd-container, .conversor, .Botones-conversor-container, .ConversorLista-container{
+        visibility: visible !important;
+    }
+
+    .start-calculador-container, .start-conversor-container{
+        margin-top: 2rem;
+    }
+
+    .start-calculador-container, #calculador, .historial-resultados-container, .seccion-cuotas-container, .botones-container1 {
+        visibility: visible !important
+    }
+
+    html {
+        background-repeat: repeat;
+    }
+
+}
 
 
 

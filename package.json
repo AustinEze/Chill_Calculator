@@ -19,13 +19,9 @@
     "url": "https://github.com/AustinEze/Chill_Calculator/issues"
   },
   "homepage": "https://github.com/AustinEze/Chill_Calculator#readme",
-  "devDependencies": {
-    "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
-  },
   "dependencies": {
-    "got": "^12.1.0",
-    "remixicon": "^2.5.0",
-    "toastify-js": "^1.11.2"
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16",
+    "remixicon": "^2.5.0"
   }
 }
